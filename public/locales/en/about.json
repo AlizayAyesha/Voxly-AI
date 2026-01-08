@@ -1,0 +1,61 @@
+{
+    "hero": {
+        "title": "About <span>Voxly</span>",
+        "text": "We're building the future of language learning — voice-first, AI-powered, and totally Gen Z.",
+        "taiko": {
+            "is": "Our vibe:",
+            "labels": [
+                "Voice-first",
+                "AI-powered",
+                "Gen Z friendly",
+                "Fluency focused"
+            ]
+        }
+    },
+    "community": {
+        "suptitle": "Our crew",
+        "title": "100+ Collaborators shaping the future of language learning",
+        "text": "Join a global community of language lovers, AI enthusiasts, and fluency chasers. We're building something fresh together."
+    },
+    "mission": {
+        "suptitle": "Our mission",
+        "title": "Make fluency accessible, fun, and real",
+        "fact": {
+            "title": "of learners feel confident speaking after just 3 months",
+            "text_1": "Real conversations from day one, powered by AI that adapts to you"
+        },
+        "text": "We believe everyone deserves to speak another language with confidence. No boring textbooks, no outdated methods — just real conversations, instant feedback, and results that actually stick.",
+        "list": [
+            {
+                "icon": "/img/about/mission-card.jpg",
+                "title": "Real conversations, real skills",
+                "text": "Practice speaking from day one. No more 'textbook speak' that nobody actually uses."
+            },
+            {
+                "icon": "about:link",
+                "title": "AI that gets you",
+                "text": "Our AI adapts to your level, your pace, and your learning style."
+            },
+            {
+                "icon": "about:settings",
+                "title": "Fluency that lasts",
+                "text": "Learn smart, not hard. Our method is designed for real-world results."
+            }
+        ]
+    },
+    "sass": {
+        "suptitle": "Our Sass",
+        "title": "Voxly vibes only",
+        "text": "Voxly vibes only",
+        "view": "view"
+    },
+    "careers": {
+        "suptitle": "Join the crew",
+        "title": "Build the future of language learning",
+        "text": "We're looking for passionate people who want to make a real impact on how the world learns languages.",
+        "openRoles": "View open roles",
+        "openRolesLink": "/careers",
+        "viewBtn": "view"
+    }
+}
+

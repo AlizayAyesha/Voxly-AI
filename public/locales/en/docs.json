@@ -1,0 +1,180 @@
+{
+    "meta": {
+        "title": "Voxly Documentation - Open Source AI Language Tutor",
+        "description": "Official documentation for Voxly AI Language Tutor. Learn about the project, how to contribute, feature roadmap, and join our open source community."
+    },
+    "hero": {
+        "title": "Voxly Documentation",
+        "subtitle": "Open Source AI Language Tutor - Building the future of language learning together",
+        "tagline": "Empowering language learners worldwide with conversational AI"
+    },
+    "about": {
+        "title": "About Voxly",
+        "content": "Voxly is an innovative open-source AI language tutor designed to help learners practice conversational skills through interactive dialogue with an intelligent avatar. Our mission is to make language learning accessible, engaging, and effective for everyone.",
+        "features": {
+            "title": "Core Features",
+            "items": [
+                "Real-time voice conversations with AI tutor",
+                "Multi-language support (Spanish, French, German, Chinese, Japanese, and more)",
+                "Animated avatar with speech synchronization",
+                "Interactive quizzes and vocabulary building",
+                "Progress tracking and learning statistics",
+                "Privacy-first approach with local data handling"
+            ]
+        },
+        "technology": {
+            "title": "Technology Stack",
+            "description": "Built with modern web technologies for performance and scalability"
+        }
+    },
+    "openSource": {
+        "title": "Open Source",
+        "license": {
+            "title": "License",
+            "content": "Voxly is released under the MIT License, making it free to use, modify, and distribute for both personal and commercial projects."
+        },
+        "repository": {
+            "title": "Repository",
+            "content": "Our codebase is hosted on GitHub, where we welcome contributions from developers worldwide."
+        },
+        "philosophy": {
+            "title": "Our Philosophy",
+            "content": "We believe in the power of community-driven development. By making Voxly open source, we aim to create a platform where developers, linguists, and educators can collaborate to create the best possible language learning experience."
+        }
+    },
+    "contribute": {
+        "title": "How to Contribute",
+        "intro": "We welcome contributions from developers of all skill levels. Whether you're a seasoned programmer or just starting out, there's a place for you in our community.",
+        "ways": {
+            "title": "Ways to Contribute",
+            "items": [
+                {
+                    "title": "Code Contributions",
+                    "description": "Fix bugs, implement new features, or improve existing functionality"
+                },
+                {
+                    "title": "Language Support",
+                    "description": "Add new languages or improve existing translations"
+                },
+                {
+                    "title": "Documentation",
+                    "description": "Improve guides, add examples, or translate documentation"
+                },
+                {
+                    "title": "Testing",
+                    "description": "Report bugs, test new features, or help with accessibility"
+                },
+                {
+                    "title": "UI/UX Design",
+                    "description": "Enhance the user interface or create new visual elements"
+                }
+            ]
+        },
+        "steps": {
+            "title": "Getting Started",
+            "items": [
+                {
+                    "title": "Fork the Repository",
+                    "description": "Create your own fork of the Voxly project on GitHub"
+                },
+                {
+                    "title": "Set Up Development Environment",
+                    "description": "Clone the repository and install dependencies"
+                },
+                {
+                    "title": "Create a Branch",
+                    "description": "Create a new branch for your feature or bug fix"
+                },
+                {
+                    "title": "Make Changes",
+                    "description": "Implement your changes following our coding guidelines"
+                },
+                {
+                    "title": "Submit a Pull Request",
+                    "description": "Push your changes and submit a PR for review"
+                }
+            ]
+        },
+        "guidelines": {
+            "title": "Contribution Guidelines",
+            "content": "Please read our contribution guidelines before submitting any changes. We value code quality, clear documentation, and respectful communication."
+        }
+    },
+    "features": {
+        "title": "Feature Ideas & Roadmap",
+        "intro": "We're constantly improving Voxly. Here are some ideas we're excited about, and we welcome your suggestions.",
+        "required": {
+            "title": "Required Features",
+            "description": "Key features we're actively working on",
+            "items": [
+                {
+                    "title": "Advanced Speech Recognition",
+                    "description": "Improve accuracy with custom ASR models and accent support"
+                },
+                {
+                    "title": "Conversation Persistence",
+                    "description": "Save and resume conversations across sessions"
+                },
+                {
+                    "title": "Learning Analytics Dashboard",
+                    "description": "Detailed insights into learning progress and patterns"
+                },
+                {
+                    "title": "Offline Mode",
+                    "description": "Core functionality without internet connection"
+                },
+                {
+                    "title": "Mobile Application",
+                    "description": "Native iOS and Android apps for learning on the go"
+                }
+            ]
+        },
+        "ideas": {
+            "title": "Feature Ideas",
+            "description": "Creative ideas we're exploring",
+            "items": [
+                "AI-powered conversation scenarios and role-play",
+                "Grammar explanations and error correction",
+                "Pronunciation scoring and feedback",
+                "Social learning features and peer practice",
+                "Integration with language learning platforms",
+                "Custom avatar creator and personalization",
+                "Virtual classroom support for teachers",
+                "Gamification elements and achievements",
+                "Podcast-style listening exercises",
+                "Writing practice with AI feedback"
+            ]
+        }
+    },
+    "community": {
+        "title": "Community & Feedback",
+        "intro": "Voxly thrives on community involvement. Your ideas, feedback, and suggestions help shape the future of this project.",
+        "share": {
+            "title": "Share Your Ideas",
+            "description": "Have a great idea for a feature? Want to suggest improvements? We'd love to hear from you!"
+        },
+        "contact": {
+            "title": "Get in Touch",
+            "description": "For feature requests, suggestions, or general inquiries, please reach out to us",
+            "email": "sherlockholme898@gmail.com",
+            "note": "We read every email and try to respond within 48 hours."
+        },
+        "engagement": {
+            "title": "Ways to Engage",
+            "items": [
+                "Comment on GitHub issues and discussions",
+                "Submit feature proposals via email",
+                "Join our community forums or chat groups",
+                "Participate in community surveys",
+                "Contribute to our documentation wiki"
+            ]
+        }
+    },
+    "footer": {
+        "cta": "Ready to contribute? Start your journey with Voxly today!",
+        "startButton": "Get Started",
+        "viewCode": "View on GitHub",
+        "joinCommunity": "Join Community"
+    }
+}
+

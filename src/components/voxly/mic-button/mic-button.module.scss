@@ -1,0 +1,226 @@
+.micContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.micButton {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
+
+    &:hover:not(.disabled) {
+        transform: scale(1.05);
+        box-shadow: 0 12px 40px rgba(108, 99, 255, 0.4);
+    }
+
+    &:active:not(.disabled) {
+        transform: scale(0.98);
+    }
+
+    &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    &.recording {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        box-shadow: 0 8px 30px rgba(239, 68, 68, 0.3);
+        animation: recordingPulse 2s ease-in-out infinite;
+    }
+
+    &.loading {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+}
+
+@keyframes recordingPulse {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(239, 68, 68, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(239, 68, 68, 0.5);
+    }
+}
+
+.buttonContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.micIcon,
+.stopIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopIcon {
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.spinner {
+    display: flex;
+    gap: 3px;
+
+    span {
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        border-radius: 50%;
+        animation: spinnerBounce 1.4s ease-in-out infinite both;
+
+        &:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        &:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0s;
+        }
+    }
+}
+
+@keyframes spinnerBounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+// Waveform Animation
+.waveformContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 60px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .recording & {
+        opacity: 1;
+    }
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 100%;
+
+    span {
+        width: 4px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 2px;
+        animation: waveformDance 0.5s ease-in-out infinite;
+
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.05}s;
+                height: random(40) + 20px;
+            }
+        }
+    }
+}
+
+@keyframes waveformDance {
+    0%, 100% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+// Pulse Ring
+.pulseRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: pulseRingExpand 2s ease-out infinite;
+}
+
+@keyframes pulseRingExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+// Hint Text
+.hint {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5a5a7a;
+    margin: 0;
+    transition: color 0.2s ease;
+
+    .recording & {
+        color: #ef4444;
+    }
+
+    .loading & {
+        color: #f59e0b;
+    }
+}
+
+.permissionWarning {
+    font-size: 12px;
+    color: #ef4444;
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 8px;
+}
+
+// Responsive
+@media screen and (max-width: 768px) {
+    .micButton {
+        width: 80px;
+        height: 80px;
+    }
+
+    .micIcon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .waveformContainer {
+        width: 100px;
+        height: 50px;
+    }
+
+    .hint {
+        font-size: 13px;
+    }
+}
+

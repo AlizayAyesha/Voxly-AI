@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "title": "FAQ - Voxly Help Center",
+        "description": "Frequently asked questions about Voxly AI Language Tutor"
+    },
+    "hero": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions about using Voxly"
+    },
+    "categories": [
+        {
+            "key": "general",
+            "title": "General Questions",
+            "questions": [
+                {
+                    "id": "what-is-voxly",
+                    "question": "What is Voxly?",
+                    "answer": "Voxly is an AI-powered language learning tutor that helps you practice real conversations in your target language. Using advanced natural language processing, Voxly adapts to your skill level and provides personalized conversation practice to help you learn faster."
+                },
+                {
+                    "id": "how-much-cost",
+                    "question": "How much does Voxly cost?",
+                    "answer": "Voxly offers a free tier with basic features, and premium plans with advanced features like unlimited conversations, progress tracking, and detailed analytics."
+                },
+                {
+                    "id": "languages-supported",
+                    "question": "What languages does Voxly support?",
+                    "answer": "Voxly currently supports 12 languages: Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Russian, Arabic, Hindi, and English."
+                }
+            ]
+        },
+        {
+            "key": "getting-started",
+            "title": "Getting Started",
+            "questions": [
+                {
+                    "id": "how-to-start",
+                    "question": "How do I start my first conversation?",
+                    "answer": "Simply select your target language from the dropdown, optionally enable voice, and click 'Start Conversation'. Voxly will greet you in your chosen language."
+                },
+                {
+                    "id": "change-language",
+                    "question": "Can I change my learning language?",
+                    "answer": "Yes! You can change your target language at any time by selecting a different language from the dropdown menu."
+                },
+                {
+                    "id": "voice-required",
+                    "question": "Is voice input required?",
+                    "answer": "No, voice input is optional. You can practice by typing your responses if you prefer."
+                }
+            ]
+        },
+        {
+            "key": "technical",
+            "title": "Technical Questions",
+            "questions": [
+                {
+                    "id": "browser-requirements",
+                    "question": "What browsers does Voxly support?",
+                    "answer": "Voxly works best on the latest versions of Chrome, Firefox, Safari, and Edge."
+                },
+                {
+                    "id": "mobile-support",
+                    "question": "Is Voxly available on mobile?",
+                    "answer": "Voxly is fully responsive and works great on mobile browsers."
+                }
+            ]
+        }
+    ],
+    "notFound": {
+        "title": "Still have questions?",
+        "description": "Could not find the answer you are looking for? Our support team is here to help.",
+        "contactButton": "Contact Support"
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "hero": {
+        "title": "Solutions that <span>hit different</span>",
+        "text": "Tools designed for the modern language learner. No old-school methods, just results."
+    },
+    "bridge": {
+        "suptitle": "Voice-First Tech",
+        "title": "Talk, don't type",
+        "text": "Our AI actually listens and responds. Practice real conversations that feel natural.",
+        "statistics": [
+            {
+                "value": "10M+",
+                "label": "Conversations powered"
+            },
+            {
+                "value": "50+",
+                "label": "Languages supported"
+            },
+            {
+                "value": "95%",
+                "label": "User satisfaction"
+            }
+        ]
+    },
+    "explorer": {
+        "suptitle": "Progress Tracking",
+        "title": "See your fluency grow",
+        "text": "Track your journey from beginner to fluent. Set goals, celebrate wins, and level up.",
+        "statistics": [
+            {
+                "value": "85%",
+                "label": "Reach fluency faster"
+            },
+            {
+                "value": "3x",
+                "label": "More speaking practice"
+            }
+        ]
+    },
+    "swap": {
+        "suptitle": "Smart Learning",
+        "title": "Learn your way",
+        "text": "Customize your learning path. Pick topics you actually care about.",
+        "statistics": [
+            {
+                "value": "500+",
+                "label": "Real-life scenarios"
+            },
+            {
+                "value": "AI",
+                "label": "Personalized feedback"
+            }
+        ]
+    },
+    "infrastructure": {
+        "suptitle": "Our Stack",
+        "title": "Built different",
+        "text": "Powered by cutting-edge AI that actually understands how you speak.",
+        "list": [
+            {
+                "title": "Real-time Voice Recognition",
+                "text": "Instant feedback on pronunciation and fluency"
+            },
+            {
+                "title": "Adaptive Learning AI",
+                "text": "Content that evolves with your progress"
+            },
+            {
+                "title": "Conversation Simulation",
+                "text": "Practice any scenario, anytime"
+            },
+            {
+                "title": "Progress Analytics",
+                "text": "Track every step of your journey"
+            }
+        ]
+    }
+}
+

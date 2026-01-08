@@ -1,0 +1,2361 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f7;
+
+    &.darkMode {
+        background: #121212;
+    }
+}
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+// Left Sidebar - Friends List
+.sidebar {
+    width: 360px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    border-right: 1px solid #eee;
+}
+
+.sidebarHeader {
+    padding: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.searchBox {
+    position: relative;
+    margin-bottom: 16px;
+
+    input {
+        width: 100%;
+        padding: 14px 20px 14px 48px;
+        border: none;
+        background: #f5f5f7;
+        border-radius: 12px;
+        font: 500 14px/1.5 $kFontPublicSans;
+        color: #333;
+        box-sizing: border-box;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            background: #eee;
+        }
+    }
+
+    svg {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Row for search + settings button */
+.searchRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    /* ensure search box grows and settings button keeps fixed size */
+    .searchBox {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+
+    button {
+        flex: 1;
+        padding: 10px 16px;
+        border: none;
+        background: #f5f5f7;
+        border-radius: 8px;
+        font: 500 13px/1.5 $kFontPublicSans;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #eee;
+        }
+
+        &.active {
+            background: #6C63FF;
+            color: #fff;
+        }
+    }
+}
+
+.addFriendBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    border: 2px dashed #ddd;
+    background: transparent;
+    border-radius: 10px;
+    font: 600 14px/1.5 $kFontPublicSans;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #6C63FF;
+        color: #6C63FF;
+        background: rgba(108, 99, 255, 0.05);
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.friendsList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.friendItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #f5f5f7;
+    }
+
+    &.active {
+        background: rgba(108, 99, 255, 0.1);
+    }
+}
+
+.avatarWrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.onlineIndicator {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    background: #22c55e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.offlineIndicator {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    background: #ccc;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.friendInfo {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.friendName {
+    font: 600 15px/1.4 $kFontPublicSans;
+    color: #333;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.friendStatus {
+    font: 400 13px/1.4 $kFontPublicSans;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.friendMeta {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.lastTime {
+    font: 400 12px/1.4 $kFontPublicSans;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.unreadBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: #6C63FF;
+    border-radius: 11px;
+    font: 600 12px/1 $kFontPublicSans;
+    color: #fff;
+}
+
+// Chat Area
+.chatArea {
+    flex: 1;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-left: none;
+}
+
+.chatHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.chatAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chatUserInfo {
+    flex: 1;
+}
+
+.chatUserName {
+    font: 600 16px/1.4 $kFontPublicSans;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatUserStatus {
+    font: 400 13px/1.4 $kFontPublicSans;
+    color: #22c55e;
+
+    &.offline {
+        color: #888;
+    }
+}
+
+.languageSelector {
+    position: relative;
+}
+
+.langSelectorBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #f5f5f7;
+    border: none;
+    border-radius: 20px;
+    font: 500 13px/1.5 $kFontPublicSans;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #eee;
+        color: #333;
+    }
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.langName {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.langDropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.langOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    font: 500 14px/1.5 $kFontPublicSans;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+
+    &:hover {
+        background: #f5f5f7;
+    }
+
+    &.active {
+        background: rgba(108, 99, 255, 0.08);
+        color: #6C63FF;
+    }
+
+    &:first-child {
+        border-radius: 12px 12px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+.langFlag {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.langLabel {
+    flex: 1;
+}
+
+.checkIcon {
+    flex-shrink: 0;
+    color: #6C63FF;
+}
+
+.chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.noConversation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+
+    svg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        opacity: 0.3;
+    }
+
+    p {
+        font: 500 16px/1.5 $kFontPublicSans;
+    }
+}
+
+.messageGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &.sent {
+        align-self: flex-end;
+        align-items: flex-end;
+    }
+
+    &.received {
+        align-self: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.messageWrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.messageBubble {
+    max-width: 65%;
+    padding: 14px 18px;
+    border-radius: 18px;
+    font: 500 14px/1.5 $kFontPublicSans;
+
+    &.received {
+        background: #f5f5f7;
+        color: #333;
+        border-bottom-left-radius: 4px;
+    }
+
+    &.sent {
+        background: #6C63FF;
+        color: #fff;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.translateBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #999;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    .messageGroup:hover & {
+        opacity: 1;
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: #6C63FF;
+    }
+}
+
+.translatedMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.originalMessage {
+    font-size: 13px;
+    opacity: 0.6;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.translationDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    opacity: 0.5;
+}
+
+.translatedText {
+    font-weight: 500;
+}
+
+.translationBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    padding: 4px 8px;
+    background: rgba(108, 99, 255, 0.1);
+    color: #6C63FF;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+.messageTime {
+    font: 400 11px/1.4 $kFontPublicSans;
+    color: #999;
+    padding: 0 4px;
+}
+
+.chatInput {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    border-top: 1px solid #eee;
+}
+
+.inputWrapper {
+    flex: 1;
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 14px 20px;
+        border: 2px solid #eee;
+        border-radius: 24px;
+        font: 500 14px/1.5 $kFontPublicSans;
+        color: #333;
+        box-sizing: border-box;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #6C63FF;
+        }
+    }
+}
+
+.sendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #6C63FF;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #5a52e0;
+        transform: scale(1.05);
+    }
+
+    &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.attachmentBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #6C63FF;
+        color: #6C63FF;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// Add Friend Modal
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal {
+    background: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+
+    h2 {
+        font: 700 20px/1.3 $kFontPublicSans;
+        color: #333;
+        margin: 0;
+    }
+
+    .closeBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        background: #f5f5f7;
+        border: none;
+        border-radius: 50%;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #eee;
+            color: #333;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.modalSearch {
+    padding: 20px 24px;
+    flex-shrink: 0;
+
+    input {
+        width: 100%;
+        padding: 14px 20px;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font: 500 14px/1.5 $kFontPublicSans;
+        color: #333;
+        box-sizing: border-box;
+        min-height: 48px;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #6C63FF;
+        }
+    }
+}
+
+.modalContent {
+    padding: 0 24px 24px;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.userSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+
+    &:hover {
+        background: #f5f5f7;
+    }
+
+    &:active {
+        background: #eee;
+    }
+}
+
+.userSearchAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userSearchInfo {
+    flex: 1;
+
+    .name {
+        font: 600 15px/1.4 $kFontPublicSans;
+        color: #333;
+    }
+
+    .bio {
+        font: 400 13px/1.4 $kFontPublicSans;
+        color: #888;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.addUserBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: #6C63FF;
+    border: none;
+    border-radius: 20px;
+    font: 600 13px/1.5 $kFontPublicSans;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #5a52e0;
+    }
+
+    &.added {
+        background: #22c55e;
+        cursor: default;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.successMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    font: 500 14px/1.5 $kFontPublicSans;
+    border-radius: 12px;
+    margin-bottom: 16px;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// Settings Button
+.settingsBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+    margin-left: 0;
+    background: #f5f5f7;
+    border: none;
+    border-radius: 10px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #6C63FF;
+        color: #fff;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// Settings Modal
+.settingsModal {
+    background: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 540px;
+    max-height: 85vh;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsContent {
+    padding: 24px;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.settingsSection {
+    margin-bottom: 28px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sectionTitle {
+    font: 600 15px/1.4 $kFontPublicSans;
+    color: #6C63FF;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+// Avatar Upload
+.avatarUpload {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.avatarPreview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f5f5f7;
+}
+
+.changeAvatarBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #f5f5f7;
+    border: none;
+    border-radius: 10px;
+    font: 600 14px/1.5 $kFontPublicSans;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #6C63FF;
+        color: #fff;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// Form Groups
+.formGroup {
+    margin-bottom: 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    label {
+        display: block;
+        font: 600 14px/1.4 $kFontPublicSans;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        font: 500 14px/1.5 $kFontPublicSans;
+        color: #333;
+        box-sizing: border-box;
+        background: #fff;
+        transition: all 0.2s ease;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #6C63FF;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 90px;
+    }
+
+    select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 44px;
+    }
+}
+
+// Toggle Switch
+.toggleGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #f5f5f7;
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &:first-of-type {
+        padding-top: 0;
+    }
+}
+
+.toggleInfo {
+    flex: 1;
+    padding-right: 16px;
+}
+
+.toggleLabel {
+    display: block;
+    font: 600 14px/1.4 $kFontPublicSans;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.toggleDesc {
+    display: block;
+    font: 400 13px/1.4 $kFontPublicSans;
+    color: #888;
+}
+
+.toggle {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    background: #ddd;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+
+    &.active {
+        background: #6C63FF;
+    }
+}
+
+.toggleKnob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    .toggle.active & {
+        transform: translateX(24px);
+    }
+}
+
+// Modal Footer
+.modalFooter {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px;
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.cancelBtn {
+    flex: 1;
+    padding: 14px 24px;
+    background: #f5f5f7;
+    border: none;
+    border-radius: 12px;
+    font: 600 14px/1.5 $kFontPublicSans;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #eee;
+        color: #333;
+    }
+}
+
+.saveBtn {
+    flex: 1;
+    padding: 14px 24px;
+    background: #6C63FF;
+    border: none;
+    border-radius: 12px;
+    font: 600 14px/1.5 $kFontPublicSans;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #5a52e0;
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Typing Indicator
+.typingIndicator {
+    display: flex;
+    gap: 4px;
+    padding: 14px 18px;
+    background: #f5f5f7;
+    border-radius: 18px;
+    border-bottom-left-radius: 4px;
+    width: fit-content;
+
+    span {
+        width: 8px;
+        height: 8px;
+        background: #999;
+        border-radius: 50%;
+        animation: typingBounce 1.4s ease-in-out infinite;
+
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    }
+}
+
+@keyframes typingBounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-6px);
+    }
+}
+
+// Responsive
+@media screen and (max-width: $kTabletXXL) {
+    .modal {
+        max-width: 90%;
+        width: 420px;
+    }
+
+    .modalHeader {
+        padding: 20px 22px;
+
+        h2 {
+            font-size: 19px;
+        }
+
+        .closeBtn {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .modalSearch {
+        padding: 18px 22px;
+
+        input {
+            padding: 13px 18px;
+            min-height: 46px;
+        }
+    }
+
+    .modalContent {
+        padding: 0 22px 22px;
+    }
+
+    .userSearchItem {
+        padding: 13px;
+        gap: 13px;
+    }
+
+    .userSearchAvatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .userSearchInfo {
+        .name {
+            font-size: 14px;
+        }
+
+        .bio {
+            font-size: 12px;
+        }
+    }
+
+    .addUserBtn {
+        padding: 9px 16px;
+        font-size: 12px;
+        min-height: 36px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .mainContent {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .messageBubble {
+        max-width: 85%;
+    }
+
+    // Modal Responsive Styles
+    .modalOverlay {
+        padding: 16px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .modalHeader {
+        padding: 18px 20px;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .closeBtn {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .modalSearch {
+        padding: 16px 20px;
+
+        input {
+            padding: 14px 18px;
+            font-size: 15px;
+            min-height: 50px;
+        }
+    }
+
+    .modalContent {
+        padding: 0 20px 20px;
+        max-height: none;
+        flex: 1;
+    }
+
+    .userSearchItem {
+        padding: 14px;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .userSearchAvatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .userSearchInfo {
+        flex: 1;
+        min-width: 150px;
+
+        .name {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .bio {
+            font-size: 13px;
+        }
+    }
+
+    .addUserBtn {
+        width: 100%;
+        margin-top: 4px;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .chatHeader {
+        padding: 16px;
+    }
+
+    .chatMessages {
+        padding: 16px;
+    }
+
+    .chatInput {
+        padding: 16px;
+    }
+
+    // Modal Responsive Styles
+    .modalOverlay {
+        padding: 12px;
+    }
+
+    .modal {
+        width: 100%;
+        max-height: 85vh;
+        border-radius: 16px;
+    }
+
+    .modalHeader {
+        padding: 16px 18px;
+
+        h2 {
+            font-size: 17px;
+        }
+
+        .closeBtn {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .modalSearch {
+        padding: 14px 18px;
+
+        input {
+            padding: 12px 16px;
+            font-size: 15px;
+            min-height: 48px;
+        }
+    }
+
+    .modalContent {
+        padding: 0 18px 18px;
+    }
+
+    .userSearchItem {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .userSearchAvatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    .userSearchInfo {
+        flex: 1;
+        min-width: 120px;
+
+        .name {
+            font-size: 14px;
+        }
+
+        .bio {
+            font-size: 12px;
+            max-width: 200px;
+        }
+    }
+
+    .addUserBtn {
+        width: 100%;
+        margin-top: 4px;
+        padding: 10px 18px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    .successMessage {
+        padding: 12px;
+        font-size: 13px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: $kMobileM) {
+    .modalOverlay {
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .modalHeader {
+        padding: 16px;
+
+        h2 {
+            font-size: 17px;
+        }
+    }
+
+    .modalSearch {
+        padding: 14px 16px;
+
+        input {
+            padding: 12px 16px;
+        }
+    }
+
+    .modalContent {
+        padding: 0 16px 16px;
+    }
+
+    .userSearchItem {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .userSearchAvatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .userSearchInfo {
+        flex: 1;
+        min-width: 140px;
+
+        .name {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .bio {
+            font-size: 12px;
+        }
+    }
+
+    .addUserBtn {
+        width: 100%;
+        margin-top: 4px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: $kMobileSM) {
+    .modalHeader {
+        padding: 14px 16px;
+
+        h2 {
+            font-size: 16px;
+        }
+
+        .closeBtn {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+        }
+    }
+
+    .modalSearch {
+        padding: 12px 16px;
+
+        input {
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+    }
+
+    .modalContent {
+        padding: 0 16px 16px;
+    }
+
+    .userSearchItem {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .userSearchAvatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .userSearchInfo {
+        min-width: 100px;
+
+        .name {
+            font-size: 13px;
+        }
+
+        .bio {
+            font-size: 11px;
+            max-width: 150px;
+        }
+    }
+
+    .addUserBtn {
+        font-size: 12px;
+        padding: 12px 16px;
+    }
+
+    .successMessage {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: 14px;
+    }
+}
+
+// ============================================
+// DARK MODE STYLES
+// ============================================
+
+// Dark Mode Body Class
+:global(body.darkMode) {
+    .container {
+        background: #121212;
+    }
+
+    .sidebar {
+        background: #1e1e1e;
+        border-color: #333;
+
+        .sidebarHeader {
+            border-color: #333;
+        }
+
+        .searchBox {
+            input {
+                background: #2a2a2a;
+                color: #fff;
+
+                &::placeholder {
+                    color: #888;
+                }
+
+                &:focus {
+                    background: #333;
+                }
+            }
+
+            svg {
+                color: #888;
+            }
+        }
+
+        .tabs {
+            button {
+                background: #2a2a2a;
+                color: #aaa;
+
+                &:hover {
+                    background: #333;
+                }
+
+                &.active {
+                    background: #6C63FF;
+                    color: #fff;
+                }
+            }
+        }
+
+        .addFriendBtn {
+            border-color: #444;
+            color: #888;
+
+            &:hover {
+                border-color: #6C63FF;
+                color: #6C63FF;
+                background: rgba(108, 99, 255, 0.1);
+            }
+        }
+
+        .friendItem {
+            &:hover {
+                background: #2a2a2a;
+            }
+
+            &.active {
+                background: rgba(108, 99, 255, 0.15);
+            }
+
+            .friendName {
+                color: #fff;
+            }
+
+            .friendStatus {
+                color: #888;
+            }
+        }
+
+        .settingsBtn {
+            background: #2a2a2a;
+            color: #aaa;
+
+            &:hover {
+                background: #6C63FF;
+                color: #fff;
+            }
+        }
+    }
+
+    .chatArea {
+        background: #1e1e1e;
+
+        .chatHeader {
+            border-color: #333;
+        }
+
+        .chatUserName {
+            color: #fff;
+        }
+
+        .chatUserStatus {
+            color: #22c55e;
+
+            &.offline {
+                color: #888;
+            }
+        }
+
+        .langSelectorBtn {
+            background: #2a2a2a;
+            color: #aaa;
+
+            &:hover {
+                background: #333;
+                color: #fff;
+            }
+        }
+
+        .langDropdown {
+            background: #2a2a2a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+            .langOption {
+                color: #fff;
+
+                &:hover {
+                    background: #333;
+                }
+
+                &.active {
+                    background: rgba(108, 99, 255, 0.2);
+                    color: #a99fff;
+                }
+            }
+        }
+
+        .chatMessages {
+            .messageBubble {
+                &.received {
+                    background: #2a2a2a;
+                    color: #fff;
+                }
+
+                &.sent {
+                    background: #6C63FF;
+                    color: #fff;
+                }
+            }
+
+            .translateBtn {
+                color: #888;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #6C63FF;
+                }
+            }
+
+            .originalMessage {
+                color: #aaa;
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .translationDivider {
+                color: #666;
+            }
+
+            .translationBadge {
+                background: rgba(108, 99, 255, 0.2);
+                color: #a99fff;
+            }
+
+            .messageTime {
+                color: #888;
+            }
+        }
+
+        .chatInput {
+            border-color: #333;
+
+            .inputWrapper {
+                input {
+                    background: #2a2a2a;
+                    border-color: #333;
+                    color: #fff;
+
+                    &::placeholder {
+                        color: #888;
+                    }
+
+                    &:focus {
+                        border-color: #6C63FF;
+                    }
+                }
+            }
+
+            .attachmentBtn {
+                border-color: #333;
+                color: #888;
+
+                &:hover {
+                    border-color: #6C63FF;
+                    color: #6C63FF;
+                }
+            }
+        }
+
+        .noConversation {
+            color: #888;
+        }
+
+        .typingIndicator {
+            background: #2a2a2a;
+
+            span {
+                background: #888;
+            }
+        }
+    }
+
+    .modalOverlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal,
+    .settingsModal {
+        background: #1e1e1e;
+
+        .modalHeader {
+            border-color: #333;
+
+            h2 {
+                color: #fff;
+            }
+
+            .closeBtn {
+                background: #2a2a2a;
+                color: #aaa;
+
+                &:hover {
+                    background: #333;
+                    color: #fff;
+                }
+            }
+        }
+
+        .modalSearch {
+            input {
+                background: #2a2a2a;
+                border-color: #333;
+                color: #fff;
+
+                &::placeholder {
+                    color: #888;
+                }
+
+                &:focus {
+                    border-color: #6C63FF;
+                }
+            }
+        }
+
+        .userSearchItem {
+            &:hover {
+                background: #2a2a2a;
+            }
+
+            .name {
+                color: #fff;
+            }
+
+            .bio {
+                color: #888;
+            }
+        }
+
+        .addUserBtn {
+            background: #6C63FF;
+
+            &:hover {
+                background: #5a52e0;
+            }
+
+            &.added {
+                background: #22c55e;
+            }
+        }
+
+        .successMessage {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+    }
+
+    .settingsModal {
+        .settingsSection {
+            .sectionTitle {
+                color: #a99fff;
+            }
+        }
+
+        .avatarUpload {
+            border-color: #333;
+
+            .avatarPreview {
+                border-color: #333;
+            }
+        }
+
+        .changeAvatarBtn {
+            background: #2a2a2a;
+            color: #aaa;
+
+            &:hover {
+                background: #6C63FF;
+                color: #fff;
+            }
+        }
+
+        .formGroup {
+            label {
+                color: #fff;
+            }
+
+            input,
+            select,
+            textarea {
+                background: #2a2a2a;
+                border-color: #333;
+                color: #fff;
+
+                &::placeholder {
+                    color: #888;
+                }
+
+                &:focus {
+                    border-color: #6C63FF;
+                }
+            }
+
+            select {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            }
+        }
+
+        .toggleGroup {
+            border-color: #333;
+
+            .toggleLabel {
+                color: #fff;
+            }
+
+            .toggleDesc {
+                color: #888;
+            }
+        }
+
+        .modalFooter {
+            border-color: #333;
+
+            .cancelBtn {
+                background: #2a2a2a;
+                color: #aaa;
+
+                &:hover {
+                    background: #333;
+                    color: #fff;
+                }
+            }
+
+            .saveBtn {
+                background: #6C63FF;
+
+                &:hover {
+                    background: #5a52e0;
+                }
+            }
+        }
+    }
+}
+
+// ============================================
+// SETTINGS MODAL HEADER ICON STYLES
+// ============================================
+
+.settingsModalHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .headerIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(108, 99, 255, 0.1);
+        border-radius: 10px;
+        color: #6C63FF;
+        flex-shrink: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    h2 {
+        flex: 1;
+    }
+}
+
+// Dark mode header icon
+.darkMode {
+    .settingsModalHeader {
+        .headerIcon {
+            background: rgba(108, 99, 255, 0.2);
+            color: #a99fff;
+        }
+    }
+}
+
+// ============================================
+// PHOTO UPLOAD STYLES
+// ============================================
+
+.avatarUploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    border: 2px dashed #e0e0e0;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: #6C63FF;
+        background: rgba(108, 99, 255, 0.03);
+    }
+}
+
+.avatarPreviewLarge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.uploadButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.uploadBtn,
+.removeBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    font: 600 13px/1.5 $kFontPublicSans;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.uploadBtn {
+    background: #6C63FF;
+    color: #fff;
+
+    &:hover {
+        background: #5a52e0;
+        transform: translateY(-1px);
+    }
+}
+
+.removeBtn {
+    background: #f5f5f7;
+    color: #888;
+
+    &:hover {
+        background: #fee2e2;
+        color: #ef4444;
+    }
+}
+
+.fileInput {
+    display: none;
+}
+
+// Dark mode photo upload
+.darkMode {
+    .avatarUploadContainer {
+        background: #2a2a2a;
+        border-color: #444;
+
+        &:hover {
+            border-color: #6C63FF;
+            background: rgba(108, 99, 255, 0.05);
+        }
+    }
+
+    .avatarPreviewLarge {
+        border-color: #333;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .uploadBtn {
+        background: #6C63FF;
+
+        &:hover {
+            background: #5a52e0;
+        }
+    }
+
+    .removeBtn {
+        background: #333;
+        color: #aaa;
+
+        &:hover {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+    }
+}
+
+// Settings Modal Responsive
+@media screen and (max-width: $kTabletXXL) {
+    .settingsModal {
+        max-width: 480px;
+    }
+
+    .settingsContent {
+        padding: 20px;
+    }
+
+    .settingsSection {
+        margin-bottom: 24px;
+    }
+
+    .avatarUpload {
+        gap: 16px;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
+
+    .avatarPreview {
+        width: 70px;
+        height: 70px;
+    }
+
+    .changeAvatarBtn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .formGroup {
+        margin-bottom: 14px;
+
+        input,
+        select,
+        textarea {
+            padding: 12px 14px;
+        }
+    }
+
+    .toggleGroup {
+        padding: 14px 0;
+    }
+
+    .modalFooter {
+        padding: 16px 20px;
+    }
+
+    .cancelBtn,
+    .saveBtn {
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .settingsModal {
+        max-width: 90%;
+        max-height: 80vh;
+    }
+
+    .settingsContent {
+        padding: 18px;
+    }
+
+    .settingsSection {
+        margin-bottom: 20px;
+    }
+
+    .sectionTitle {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .avatarUpload {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .avatarPreview {
+        width: 64px;
+        height: 64px;
+    }
+
+    .changeAvatarBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formGroup {
+        margin-bottom: 14px;
+
+        label {
+            font-size: 13px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+    }
+
+    .toggleGroup {
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .toggleInfo {
+        flex: 1 1 100%;
+        padding-right: 0;
+    }
+
+    .toggleLabel {
+        font-size: 14px;
+    }
+
+    .toggleDesc {
+        font-size: 12px;
+    }
+
+    .toggle {
+        width: 48px;
+        height: 26px;
+    }
+
+    .toggleKnob {
+        width: 20px;
+        height: 20px;
+
+        .toggle.active & {
+            transform: translateX(22px);
+        }
+    }
+
+    .modalFooter {
+        flex-direction: row;
+        padding: 14px 18px;
+        gap: 10px;
+    }
+
+    .cancelBtn,
+    .saveBtn {
+        flex: 1;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .settingsModal {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .settingsContent {
+        padding: 16px;
+    }
+
+    .settingsSection {
+        margin-bottom: 16px;
+    }
+
+    .sectionTitle {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .avatarUpload {
+        padding-bottom: 12px;
+    }
+
+    .avatarPreview {
+        width: 56px;
+        height: 56px;
+    }
+
+    .changeAvatarBtn {
+        font-size: 12px;
+        padding: 10px 14px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .formGroup {
+        margin-bottom: 12px;
+
+        label {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        textarea {
+            min-height: 80px;
+        }
+    }
+
+    .toggleGroup {
+        padding: 10px 0;
+    }
+
+    .toggleLabel {
+        font-size: 13px;
+    }
+
+    .toggleDesc {
+        font-size: 11px;
+    }
+
+    .modalFooter {
+        padding: 12px 16px;
+    }
+
+    .cancelBtn,
+    .saveBtn {
+        padding: 12px 16px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: $kMobileM) {
+    .settingsModal {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: 16px;
+    }
+
+    .settingsContent {
+        padding: 14px;
+    }
+
+    .avatarPreview {
+        width: 64px;
+        height: 64px;
+    }
+
+    .changeAvatarBtn {
+        width: 100%;
+    }
+
+    .toggle {
+        width: 52px;
+        height: 28px;
+    }
+
+    .toggleKnob {
+        width: 22px;
+        height: 22px;
+
+        .toggle.active & {
+            transform: translateX(24px);
+        }
+    }
+
+    .modalFooter {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+
+    .cancelBtn,
+    .saveBtn {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,30 @@
+{
+    "suptitle": "Our events",
+    "title": "At Voxly, it's our goal to make fluency accessible to everyone. We're curating the ultimate learning experience",
+    "text": "Join a supportive, collaborative learning community with a greater purpose – inclusive, accessible, and dedicated to helping you speak fluently.",
+    "learnMore": "Learn more about Voxly",
+    "eventSchedule": "Learning schedule",
+    "eventName": "Event",
+    "location": "Location",
+    "month": "Month",
+    "comingSoon": "Events Coming Soon",
+    "comingSoonSubtitle": "We're planning exciting events for you. Stay tuned!",
+    "eventTypes": {
+        "congratulatingGraduates": "Congratulating Graduates",
+        "beginnerGuide": "Beginner Guide",
+        "experienceQA": "Experience Q&A & Opportunities",
+        "winSwags": "Win Swags"
+    },
+    "locations": {
+        "virtual": "Virtual",
+        "ca": "California",
+        "la": "Los Angeles",
+        "va": "Virginia"
+    },
+    "bookTicket": "Book Ticket",
+    "ticketPrice": "$5",
+    "anyMonth": "Any Month",
+    "registerNow": "Register Now",
+    "freeEvent": "Free"
+}
+

@@ -1,0 +1,102 @@
+{
+    "brand": {
+        "name": "Voxly",
+        "description": "Your AI language bestie. Talk your way to fluency."
+    },
+    "content": {
+        "title": "Come hang out with us! 🎉",
+        "text": "Join our awesome community of language learners. Make friends, share tips, and vibe together!"
+    },
+    "subscribe": {
+        "title": "Stay in the loop",
+        "text": "Get language learning tips, product updates, and community vibes straight to your inbox.",
+        "placeholder": "Enter your email",
+        "button": "Subscribe",
+        "success": "You're in! Check your inbox for confirmation.",
+        "error": "Something went wrong. Try again?"
+    },
+    "menus": {
+        "learn": {
+            "title": "Learn",
+            "items": [
+                { "title": "Languages", "link": "/ecosystem" },
+                { "title": "Creator Program", "link": "/grant-program" },
+                { "title": "Events", "link": "/events" },
+                { "title": "Blog", "link": "/blog" }
+            ]
+        },
+        "company": {
+            "title": "Company",
+            "items": [
+                { "title": "About", "link": "/about" },
+                { "title": "Careers", "link": "/careers" },
+                { "title": "Start Talking", "link": "/start-talking" }
+            ]
+        },
+        "support": {
+            "title": "Support",
+            "items": [
+                { "title": "Help Center", "link": "/help" },
+                { "title": "Contact", "link": "/contact" },
+                { "title": "Privacy", "link": "/privacy" },
+                { "title": "Terms", "link": "/terms" }
+            ]
+        },
+        "community": {
+            "title": "Community",
+            "items": [
+                { "title": "Twitter/X", "link": "https://twitter.com/voxly" },
+                { "title": "Discord", "link": "https://discord.gg/voxly" },
+                { "title": "Instagram", "link": "https://instagram.com/voxly" },
+                { "title": "TikTok", "link": "https://tiktok.com/@voxly" }
+            ]
+        }
+    },
+    "bottom": {
+        "copyright": "© 2024 Voxly. All rights reserved.",
+        "madeWith": "Made with ❤️ for language learners everywhere."
+    },
+    "socials": [
+        { "icon": "socials:twitter", "url": "https://twitter.com/", "name": "Twitter" },
+        { "icon": "socials:discord", "url": "https://discord.gg/", "name": "Discord" },
+        { "icon": "socials:github", "url": "https://github.com/AlizayAyesha", "name": "GitHub" }
+    ],
+    "joinTaiko": "Join Voxly",
+    "nav": [
+        {
+            "title": "Learn",
+            "list": [
+                { "name": "Languages", "url": "/ecosystem" },
+                { "name": "Creator Program", "url": "/grant-program" },
+                { "name": "Events", "url": "/events" },
+                { "name": "Blog", "url": "/blog" }
+            ]
+        },
+        {
+            "title": "Company",
+            "list": [
+                { "name": "About", "url": "/about" },
+                { "name": "Careers", "url": "/careers" },
+                { "name": "Start Talking", "url": "/start-talking" }
+            ]
+        },
+        {
+            "title": "Support",
+            "list": [
+                { "name": "Help Center", "url": "/help" },
+                { "name": "Contact", "url": "/contact" },
+                { "name": "Privacy", "url": "/privacy" },
+                { "name": "Terms", "url": "/terms" }
+            ]
+        },
+        {
+            "title": "Community",
+            "list": [
+                { "name": "Twitter/X", "url": "" },
+                { "name": "Discord", "url": "" },
+                { "name": "GitHub", "url": "" }
+            ]
+        }
+    ]
+}
+

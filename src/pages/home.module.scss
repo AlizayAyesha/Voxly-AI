@@ -1,0 +1,90 @@
+.root {
+    [data-link] {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    [data-logo] {
+        opacity: 0;
+        transition: opacity .7s ease;
+
+        @for $i from 2 through 3 {
+            &:nth-child(#{$i}) {
+                transition-delay: #{($i * 0.1 + 0.1)}s;
+            }
+        }
+    }
+
+    [data-social] {
+        opacity: 0;
+        transform: rotate(-90deg);
+
+        @for $i from 2 through 3 {
+            &:nth-child(#{$i}) {
+                transition-delay: #{($i * 0.1 - 0.1)}s;
+            }
+        }
+    }
+
+    [data-link],
+    [data-social] {
+        transition: .7s ease;
+        transition-property: opacity, transform;
+    }
+
+    &Animated {
+        [data-link] {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        [data-social] {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        [data-logo] {
+            opacity: 1;
+        }
+    }
+}
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Home page small dashboard aligned with header */
+.homeDashboard {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    z-index: 360; /* above header */
+    pointer-events: auto;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dashboardInner {
+        background: rgba(255,255,255,0.95);
+        padding: 8px 12px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .dashboardLinks {
+        display: flex;
+        gap: 8px;
+
+        a {
+            font: 600 13px/1 $kFontPublicSans;
+            color: #6C63FF;
+        }
+    }
+}

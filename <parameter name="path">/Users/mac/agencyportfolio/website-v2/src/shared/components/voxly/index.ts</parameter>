@@ -1,0 +1,8 @@
+<parameter name="content">export { VoxlyAvatar } from './avatar';
+export { ChatPanel } from './chat-panel';
+export { VoxlySidebar } from './sidebar';
+export { MicButton } from './mic-button';
+export { QuizPopup } from './quiz-popup';
+export { VoiceToggle } from './voice-toggle';
+export { LanguageSelectorVoxly } from './language-selector-voxly';
+</parameter>

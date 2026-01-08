@@ -1,0 +1,35 @@
+.content {
+    padding-top: 10px;
+}
+
+.item {
+    padding: 7px 10px;
+    border-radius: 8px;
+
+    font: 500 18px/1.255 $kFontClashGrotesk;
+    letter-spacing: -0.01em;
+    color: $kColorBlack;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background: #FFE4E8;
+        transform: translateX(4px);
+    }
+
+    &Active {
+        background: #FFD1DC;
+        cursor: default;
+
+        &:hover {
+            background: #FFD1DC;
+            transform: none;
+        }
+    }
+}
+
+.calendar {
+    margin-top: 8px;
+}

@@ -1,0 +1,86 @@
+<parameter name="content">import React from 'react';
+import clsx from 'clsx';
+import css from './chat-panel.module.scss';
+
+export interface Subtitle {
+    id: number;
+    text: string;
+    speaker: 'user' | 'agent';
+    language?: string;
+    timestamp: Date;
+}
+
+interface ChatPanelProps {
+    subtitles: Subtitle[];
+    currentSubtitle: string;
+    isAgentSpeaking: boolean;
+    className?: string;
+}
+
+export const ChatPanel: React.FC<ChatPanelProps> = ({
+    subtitles,
+    currentSubtitle,
+    isAgentSpeaking,
+    className
+}) => {
+    return (
+        <div className={clsx(css.chatPanel, className)}>
+            <div className={css.header}>
+                <h2 className={css.title}>Conversation</h2>
+                <span className={css.subtitle}>
+                    {subtitles.length > 0 ? `${subtitles.length} messages` : 'Start a conversation'}
+                </span>
+            </div>
+
+            <div className={css.messagesContainer}>
+                {subtitles.length === 0 ? (
+                    <div className={css.emptyState}>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                        <p>Start a conversation to see messages here</p>
+                    </div>
+                ) : (
+                    subtitles.map(subtitle => (
+                        <div
+                            key={subtitle.id}
+                            className={clsx(
+                                css.message,
+                                css[subtitle.speaker],
+                                currentSubtitle === subtitle.text && css.active
+                            )}
+                        >
+                            <div className={css.messageHeader}>
+                                <span className={css.speakerLabel}>
+                                    {subtitle.speaker === 'agent' ? '🤖 Voxly' : 'You'}
+                                </span>
+                                {subtitle.language && (
+                                    <span className={css.languageBadge}>
+                                        {subtitle.language}
+                                    </span>
+                                )}
+                            </div>
+                            <p className={css.messageText}>{subtitle.text}</p>
+                        </div>
+                    ))
+                )}
+            </div>
+
+            {isAgentSpeaking && currentSubtitle && (
+                <div className={css.speakingIndicator}>
+                    <div className={css.waveBars}>
+                        <span className={css.bar} />
+                        <span className={css.bar} />
+                        <span className={css.bar} />
+                        <span className={css.bar} />
+                        <span className={css.bar} />
+                    </div>
+                    <span className={css.speakingText}>{currentSubtitle}</span>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default ChatPanel;
+</parameter>

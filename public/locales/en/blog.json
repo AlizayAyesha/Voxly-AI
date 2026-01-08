@@ -1,0 +1,27 @@
+{
+    "certification": {
+        "title": "Get Certified",
+        "description": "Pass your language test and unlock a cert that actually means something worldwide.",
+        "passingGrade": "Crush it with 80%+",
+        "globallyRecognized": "Worldwide Recognition"
+    },
+    "date": [
+        {
+            "title": "All time",
+            "value": "all"
+        }, {
+            "title": "Last month",
+            "value": "a-month"
+        }, {
+            "title": "Last 6 months",
+            "value": "6-month"
+        }, {
+            "title": "Last year",
+            "value": "year"
+        }, {
+            "title": "Select period",
+            "value": "period"
+        }
+    ]
+}
+

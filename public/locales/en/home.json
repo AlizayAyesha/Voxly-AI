@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "Talk your way to fluency",
+    "text": "Practice real conversations with Voxly — your AI language bestie.",
+    "taiko": {
+      "is": "Voxly is:",
+      "value": "Voice-first",
+      "labels": [
+        "Voice-first",
+        "AI-powered",
+        "Real conversations",
+        "Fluency focused"
+      ]
+    },
+    "startBuilding": "Try a Demo",
+    "bridgeToTaiko": "Start Learning",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "blog": {
+    "title": "Language Tips & Guides",
+    "subtitle": "Master a language, earn a cert that's actually recognized"
+  },
+  "advantages": [
+    {
+      "id": "aicon-seamless",
+      "icon": "aicon:seamless",
+      "title": "talk, not type",
+      "text": "Learn languages the natural way — by speaking. Voxly listens, responds, and helps you level up in real time.",
+      "colors": {
+        "icon": "#6C63FF",
+        "text": "#0B101B",
+        "background": "#EFEFEF"
+      }
+    },
+    {
+      "id": "aicon-community",
+      "icon": "aicon:community",
+      "title": "real convos",
+      "text": "Practice everyday situations anytime. No stress, no judgment — just real progress vibes.",
+      "colors": {
+        "icon": "#6C63FF",
+        "text": "#0B101B",
+        "background": "#E6E8FF"
+      }
+    },
+    {
+      "id": "aicon-security",
+      "icon": "aicon:security",
+      "title": "pronunciation coach",
+      "text": "Voxly fixes your pronunciation instantly so you sound more natural, confident, and straight-up fluent.",
+      "colors": {
+        "icon": "#FFFFFF",
+        "text": "#FFFFFF",
+        "background": "#6C63FF"
+      }
+    },
+    {
+      "id": "aicon-based",
+      "icon": "aicon:based",
+      "title": "learn at your vibe",
+      "text": "Your pace, your topics, your vibe. From chill chats to professional flow.",
+      "colors": {
+        "icon": "#FFFFFF",
+        "text": "#FFFFFF",
+        "background": "#0B101B"
+      }
+    }
+  ],
+  "about": {
+    "suptitle": "About Voxly",
+    "title": "Meet <strong>Voxly</strong>, your AI language bestie",
+    "text": "Voxly helps you learn languages by helping you speak them. Powered by AI, made for Gen-Z learners who want fast, real results.",
+    "startBuilding": "Start Learning",
+    "list": [
+      {
+        "icon": "about:ethereum",
+        "title": "Pick a Language",
+        "text": "Choose what you wanna learn and start speaking ASAP."
+      },
+      {
+        "icon": "about:link",
+        "title": "Talk with Voxly",
+        "text": "Have real voice convos that match your level and goals."
+      },
+      {
+        "icon": "about:settings",
+        "title": "Get Instant Feedback",
+        "text": "Real-time corrections, tips, and confidence boosts."
+      }
+    ]
+  },
+  "solutions": {
+    "solutions": "Learn With Friends",
+    "list": [
+      {
+        "title": "<strong>Daily Conversations</strong> — speak like a local",
+        "extraTitle": "speak like a local",
+        "title_short": "Daily Conversations",
+        "text": "Practice everyday scenarios like travel, work, and casual chats.",
+        "icon": "laptop",
+        "iconLottie": "/img/laptop.json"
+      },
+      {
+        "title": "<strong>Pronunciation Mode</strong> — sound fluent, faster",
+        "extraTitle": "sound fluent, faster",
+        "title_short": "Pronunciation Mode",
+        "text": "Improve accent, clarity, and confidence with AI-powered voice feedback.",
+        "icon": "rocket",
+        "iconLottie": "/img/rocket.json"
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "Explore \nVoxly languages",
+    "text": "English, Spanish, French, and more — all powered by real voice conversations.",
+    "exploreButton": "Explore Languages",
+    "dapps": "LANGUAGES"
+  },
+  "trailblazerBanner": {
+    "button": "Start Talking Now",
+    "text": "Talk. Learn. Repeat. Build real fluency with Voxly."
+  },
+  "grantFactoryBanner": {
+    "button": "Join Voxly",
+    "text": "Your AI language journey starts here."
+  }
+}

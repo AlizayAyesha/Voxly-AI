@@ -1,0 +1,57 @@
+<parameter name="content">import React from 'react';
+import clsx from 'clsx';
+import css from './language-selector-voxly.module.scss';
+
+interface Language {
+    code: string;
+    name: string;
+    flag: string;
+}
+
+interface LanguageSelectorVoxlyProps {
+    languages: Language[];
+    currentLanguage: string;
+    onLanguageChange: (code: string) => void;
+    className?: string;
+}
+
+export const LanguageSelectorVoxly: React.FC<LanguageSelectorVoxlyProps> = ({
+    languages,
+    currentLanguage,
+    onLanguageChange,
+    className
+}) => {
+    const currentLang = languages.find(l => l.code === currentLanguage) || languages[0];
+    
+    return (
+        <div className={clsx(css.selector, className)}>
+            <div className={css.currentLanguage}>
+                <span className={css.flag}>{currentLang.flag}</span>
+                <span className={css.name}>{currentLang.name}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={css.chevron}>
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </div>
+            
+            <div className={css.dropdown}>
+                {languages.map(lang => (
+                    <button
+                        key={lang.code}
+                        className={clsx(css.option, lang.code === currentLanguage && css.selected)}
+                        onClick={() => onLanguageChange(lang.code)}
+                    >
+                        <span className={css.flag}>{lang.flag}</span>
+                        <span className={css.name}>{lang.name}</span>
+                        {lang.code === currentLanguage && (
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={css.check}>
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        )}
+                    </button>
+                ))}
+            </div>
+    );
+};
+
+export default LanguageSelectorVoxly;
+</parameter>

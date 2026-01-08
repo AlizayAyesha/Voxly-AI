@@ -1,0 +1,96 @@
+{
+    "meta": {
+        "title": "Chat Hub – Language Learning Community",
+        "description": "Connect with language learners and practice together"
+    },
+    "title": "Chat Hub",
+    "subtitle": "Practice languages with your learning partners",
+    "searchPlaceholder": "Search conversations...",
+    "addFriend": "Add Language Partner",
+    "friends": "Language Partners",
+    "groups": "Study Groups",
+    "online": "Online",
+    "offline": "Offline",
+    "typing": "typing...",
+    "send": "Send",
+    "typeMessage": "Type a message...",
+    "noConversation": "Select a conversation to start chatting",
+    "noFriends": "No language partners yet",
+    "addFirstFriend": "Add your first language partner to start practicing",
+    "unread": "unread",
+    "justNow": "Just now",
+    "minutesAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "addFriendModal": {
+        "title": "Add Language Partner",
+        "searchPlaceholder": "Search by name or language interest...",
+        "add": "Add",
+        "cancel": "Cancel",
+        "success": "Partner request sent!",
+        "alreadyFriends": "You are already connected"
+    },
+    "demoUsers": {
+        "alex": {
+            "name": "Alex Johnson",
+            "bio": "Learning Spanish 🇪🇸 | G1 level",
+            "status": "Online"
+        },
+        "sarah": {
+            "name": "Sarah Chen",
+            "bio": "Japanese learner 🇯🇵 | N3 level ",
+            "status": "Online"
+        },
+        "mike": {
+            "name": "Mike Wilson",
+            "bio": "French speaker 🇫🇷 | Native",
+            "status": "Last seen 2h ago"
+        },
+        "emma": {
+            "name": "Emma Davis",
+            "bio": "German learner 🇩🇪 | B2 level",
+            "status": "Online"
+        },
+        "james": {
+            "name": "James Brown",
+            "bio": "Mandarin Chinese 🇨🇳 | L1 level ",
+            "status": "Last seen 5m ago"
+        },
+        "lisa": {
+            "name": "Lisa Park",
+            "bio": "Korean learner 🇰🇷 | Advanced",
+            "status": "Online"
+        }
+    },
+    "sampleMessages": {
+        "alex": ["Hola! ¿Cómo va tu español hoy?", "Practiced 30 minutes this morning 🌟", "Remember, 'R' sounds like a cat purring! 🐱"],
+        "sarah": ["今日の日本語の練習はしましたか？", "I finally understood that grammar point! 🎉", "Let's do a language exchange next week ☕"],
+        "mike": ["Bonjour! Ça va?", "Your French pronunciation is getting so good!", "We should practice with that new vocabulary list 📝"],
+        "emma": ["Guten Tag! Wie geht's?", "Ich habe gestern Deutsch gelernt 🇩🇪", "The compound words are tricky but fun! 📚"],
+        "james": ["你好! 你今天怎么样?", "Chinese tones are challenging but I'm improving!", "Wrote 20 new characters today ✍️"],
+        "lisa": ["안녕하세요! Korean study session?", "I learned 10 new words today! 🎊", "Let's watch a Korean drama to practice 🎬"]
+    },
+    "settings": {
+        "title": "Profile Settings",
+        "profileSection": "Profile",
+        "displayName": "Display Name",
+        "displayNamePlaceholder": "Enter your display name",
+        "bio": "Bio",
+        "bioPlaceholder": "Tell others about yourself...",
+        "avatar": "Profile Photo",
+        "languagesSection": "Languages",
+        "nativeLanguage": "Native Language",
+        "learningLanguage": "Learning Language",
+        "preferencesSection": "Preferences",
+        "notifications": "Notifications",
+        "notificationsDesc": "Receive message notifications",
+        "darkMode": "Dark Mode",
+        "darkModeDesc": "Use dark theme",
+        "autoTranslate": "Auto Translate",
+        "autoTranslateDesc": "Automatically translate incoming messages",
+        "save": "Save Changes",
+        "cancel": "Cancel",
+        "saved": "Settings saved successfully!",
+        "profileUpdated": "Profile updated successfully!"
+    }
+}
+

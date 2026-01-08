@@ -1,0 +1,302 @@
+.sidebar {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        background: #e8e8e8;
+    }
+    
+    &.active {
+        background: linear-gradient(135deg, #6C63FF 0%, #4834d4 100%);
+        color: white;
+    }
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.historyTab {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chatHistory {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.historyItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: #f9f9ff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        background: #f0f0ff;
+    }
+}
+
+.historyIcon {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+}
+
+.historyDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.historyTitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.historyMessage {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.historyTime {
+    margin: 4px 0 0 0;
+    font-size: 11px;
+    color: #888;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+    
+    p {
+        margin: 0;
+    }
+}
+
+.emptyHint {
+    margin-top: 8px !important;
+    font-size: 13px;
+    color: #aaa !important;
+}
+
+.vocabTab {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vocabTip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #fff9e6;
+    border-radius: 10px;
+    font-size: 13px;
+    
+    p {
+        margin: 0;
+        color: #666;
+    }
+    
+    strong {
+        color: #333;
+    }
+}
+
+.vocabTipIcon {
+    font-size: 18px;
+}
+
+.vocabList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vocabItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.vocabWord {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.vocabMeaning {
+    font-size: 13px;
+    color: #666;
+}
+
+.statsTab {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    background: #f9f9ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6C63FF;
+}
+
+.statLabel {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.progressSection {
+    padding: 16px;
+    background: #f9f9ff;
+    border-radius: 10px;
+}
+
+.progressTitle {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.progressBar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #6C63FF, #9c8cff);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.quizSection {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.quizButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    border: none;
+    background: linear-gradient(135deg, #6C63FF 0%, #4834d4 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    }
+}
+
+.quizIcon {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 16px;
+    }
+    
+    .tabs {
+        gap: 6px;
+    }
+    
+    .tab {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .statsTab {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .statCard {
+        padding: 12px 6px;
+    }
+    
+    .statValue {
+        font-size: 20px;
+    }
+}
+

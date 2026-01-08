@@ -1,0 +1,81 @@
+{
+    "hero": {
+        "title": "Join the <span>Voxly</span> crew",
+        "text": "We're building the future of language learning. Come vibe with us."
+    },
+    "community": {
+        "suptitle": "Open roles",
+        "title": "Work where <span>culture</span> meets <span>impact</span>",
+        "text": "Join a team that actually gets it. Remote-first, Gen Z vibes, and a mission that matters.",
+        "button": "View open positions"
+    },
+    "openPositions": {
+        "all": "All",
+        "remote": "Remote",
+        "engineering": "Engineering",
+        "design": "Design",
+        "operations": "Operations"
+    },
+    "positions": [
+        {
+            "id": 1,
+            "title": "Senior AI Engineer",
+            "department": "Engineering",
+            "location": "Remote",
+            "type": "Full-time"
+        },
+        {
+            "id": 2,
+            "title": "Voice UI Designer",
+            "department": "Design",
+            "location": "Remote",
+            "type": "Full-time"
+        },
+        {
+            "id": 3,
+            "title": "Language Content Creator",
+            "department": "Operations",
+            "location": "Remote",
+            "type": "Full-time"
+        },
+        {
+            "id": 4,
+            "title": "Frontend Developer",
+            "department": "Engineering",
+            "location": "Remote",
+            "type": "Full-time"
+        }
+    ],
+    "perks": {
+        "suptitle": "Perks & vibes",
+        "title": "Why you'll love it here",
+        "list": [
+            {
+                "title": "Fully remote",
+                "text": "Work from anywhere. No office, no commute, no stress."
+            },
+            {
+                "title": "Learning budget",
+                "text": "Annual stipend for courses, conferences, and gear."
+            },
+            {
+                "title": "Flexible hours",
+                "text": "Work when you're most productive. We focus on results, not hours."
+            },
+            {
+                "title": "Health & wellness",
+                "text": "Comprehensive coverage for you and your fam."
+            }
+        ]
+    },
+    "culture": {
+        "title": "Our culture",
+        "text": "We're building a team of curious, passionate people who want to make a real difference in how the world learns languages. No ego, no drama — just good vibes and great work."
+    },
+    "application": {
+        "title": "Don't see your role?",
+        "text": "We're always looking for talented people. Send us your resume and we'll keep you in mind.",
+        "button": "Email us"
+    }
+}
+

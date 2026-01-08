@@ -1,0 +1,663 @@
+
+.certification {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF5F8 0%, #F8F0FF 50%, #F0F5FF 100%);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(186, 156, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 200, 220, 0.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #6C63FF;
+  margin: 0 0 16px;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.subtitle {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.formSection {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 10px 40px rgba(108, 99, 255, 0.1),
+    0 4px 20px rgba(255, 182, 193, 0.15);
+}
+
+.formGroup {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  display: block;
+  font-family: 'PublicSans-SemiBold', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  border: 2px solid #f0e6ff;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    border-color: #BA94FF;
+    box-shadow: 0 0 0 3px rgba(186, 148, 255, 0.2);
+  }
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23BA94FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.option {
+  background: #fff;
+  color: #333;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 36px;
+  font-family: 'PublicSans-SemiBold', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #FF69B4 0%, #BA94FF 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// Test Section Styles
+.testSection {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 10px 40px rgba(108, 99, 255, 0.1),
+    0 4px 20px rgba(255, 182, 193, 0.15);
+}
+
+.testHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(186, 148, 255, 0.2);
+}
+
+.testInfo {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.testMeta {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: #f0e6ff;
+  border-radius: 3px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF69B4 0%, #BA94FF 100%);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.questionCard {
+  margin-bottom: 32px;
+}
+
+.questionNumber {
+  font-family: 'PublicSans-SemiBold', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.questionText {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #6C63FF;
+  margin: 0 0 24px;
+  line-height: 1.3;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 2px solid #f0e6ff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #F8F0FF;
+    border-color: #BA94FF;
+  }
+
+  &.selected {
+    background: rgba(186, 148, 255, 0.1);
+    border-color: #BA94FF;
+  }
+
+  &.correct {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: #22c55e;
+  }
+
+  &.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+  }
+}
+
+.optionRadio {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d0c6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+
+  .selected & {
+    border-color: #BA94FF;
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #BA94FF;
+      border-radius: 50%;
+    }
+  }
+
+  .correct & {
+    border-color: #22c55e;
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+  }
+
+  .incorrect & {
+    border-color: #ef4444;
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+  }
+}
+
+.optionText {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+.testActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid rgba(186, 148, 255, 0.2);
+}
+
+.testButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: 'PublicSans-SemiBold', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  background: #fff;
+  border: 2px solid #BA94FF;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #BA94FF;
+    color: #fff;
+  }
+
+  &.primary {
+    background: linear-gradient(135deg, #FF69B4 0%, #BA94FF 100%);
+    border: none;
+    color: #fff;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+    }
+  }
+}
+
+// Results Section Styles
+.resultsSection {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 48px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 
+    0 10px 40px rgba(108, 99, 255, 0.1),
+    0 4px 20px rgba(255, 182, 193, 0.15);
+}
+
+.resultsIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  &.passed {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+  }
+
+  &.failed {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+  }
+}
+
+.resultsTitle {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #6C63FF;
+  margin: 0 0 12px;
+
+  &.passed {
+    color: #22c55e;
+  }
+
+  &.failed {
+    color: #ef4444;
+  }
+}
+
+.resultsMessage {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 32px;
+}
+
+.scoreDisplay {
+  background: #F8F0FF;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.scoreValue {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  color: #6C63FF;
+  margin: 0 0 8px;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
+}
+
+.scoreLabel {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+.resultsActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+// Certificate Styles
+.certificateWrapper {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid rgba(186, 148, 255, 0.2);
+}
+
+.certificateButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 36px;
+  font-family: 'PublicSans-SemiBold', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+  }
+}
+
+// Hidden Certificate for PDF Generation
+.certificateHidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.certificate {
+  width: 800px;
+  height: 600px;
+  background: linear-gradient(135deg, #FFF5F8 0%, #F8F0FF 50%, #F0F5FF 100%);
+  border: 8px solid;
+  border-image: linear-gradient(135deg, #FF69B4 0%, #BA94FF 100%) 1;
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'PublicSans-Regular', sans-serif;
+  color: #333;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid rgba(186, 148, 255, 0.3);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    pointer-events: none;
+  }
+}
+
+.certificateBadge {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF69B4 0%, #BA94FF 100%);
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px solid rgba(255, 105, 180, 0.5);
+    border-radius: 50%;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+  }
+}
+
+.certificateTitle {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #FF69B4 0%, #BA94FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.certificatePresented {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.certificateName {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #6C63FF;
+  margin: 0 0 24px;
+  padding: 0 40px;
+  border-bottom: 2px solid rgba(186, 148, 255, 0.3);
+}
+
+.certificateText {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+.certificateLanguage {
+  font-family: 'ClashDisplay-SemiBold', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FF69B4;
+  margin: 0 0 24px;
+}
+
+.certificateScore {
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 32px;
+
+  span {
+    color: #6C63FF;
+    font-weight: 600;
+  }
+}
+
+.certificateFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 24px;
+  border-top: 1px solid rgba(186, 148, 255, 0.2);
+}
+
+.certificateDate {
+  text-align: left;
+}
+
+.certificateDateLabel {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.certificateDateValue {
+  font-size: 16px;
+  color: #555;
+}
+
+.certificateBrand {
+  text-align: right;
+}
+
+.certificateBrandName {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FF69B4;
+  margin: 0 0 4px;
+}
+
+.certificateVerified {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+// Error Message
+.error {
+  font-family: 'PublicSans-Regular', sans-serif;
+  font-size: 13px;
+  color: #FF69B4;
+  margin-top: 8px;
+}
+

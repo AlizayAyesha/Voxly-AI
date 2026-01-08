@@ -1,0 +1,38 @@
+<parameter name="content">import React from 'react';
+import clsx from 'clsx';
+import css from './avatar.module.scss';
+
+interface AvatarProps {
+    isSpeaking?: boolean;
+    isListening?: boolean;
+    size?: 'small' | 'medium' | 'large';
+    className?: string;
+}
+
+export const Avatar: React.FC<AvatarProps> = ({
+    isSpeaking = false,
+    isListening = false,
+    size = 'medium',
+    className
+}) => {
+    return (
+        <div className={clsx(css.avatar, css[size], className)}>
+            <div className={clsx(css.wrapper, isSpeaking && css.speaking, isListening && css.listening)}>
+                <div className={css.circle}>
+                    <svg viewBox="0 0 100 100" fill="none" className={css.face}>
+                        <circle cx="50" cy="50" r="45" fill="currentColor" className={css.faceBg} />
+                        <circle cx="35" cy="40" r="5" fill="white" className={css.eye} />
+                        <circle cx="65" cy="40" r="5" fill="white" className={css.eye} />
+                        <path d="M 30 60 Q 50 75 70 60" stroke="white" strokeWidth="3" fill="none" className={css.mouth} />
+                        <circle cx="50" cy="30" r="8" fill="rgba(255,255,255,0.3)" className={css.cheek} />
+                    </svg>
+                </div>
+            {isListening && (
+                <div className={css.pulseRing} />
+            )}
+        </div>
+    );
+};
+
+export default Avatar;
+</parameter>

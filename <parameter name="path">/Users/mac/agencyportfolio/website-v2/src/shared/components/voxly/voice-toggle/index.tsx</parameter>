@@ -1,0 +1,33 @@
+<parameter name="content">import React from 'react';
+import clsx from 'clsx';
+import css from './voice-toggle.module.scss';
+
+interface VoiceToggleProps {
+    isVoiceEnabled: boolean;
+    onToggle: () => void;
+    className?: string;
+}
+
+export const VoiceToggle: React.FC<VoiceToggleProps> = ({
+    isVoiceEnabled,
+    onToggle,
+    className
+}) => {
+    return (
+        <button
+            className={clsx(css.toggle, isVoiceEnabled && css.enabled, className)}
+            onClick={onToggle}
+            aria-label={isVoiceEnabled ? 'Disable voice' : 'Enable voice'}
+        >
+            <span className={css.track}>
+                <span className={css.thumb} />
+            </span>
+            <span className={css.label}>
+                {isVoiceEnabled ? 'Voice On' : 'Voice Off'}
+            </span>
+        </button>
+    );
+};
+
+export default VoiceToggle;
+</parameter>

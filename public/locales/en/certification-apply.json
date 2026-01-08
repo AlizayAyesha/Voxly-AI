@@ -1,0 +1,62 @@
+{
+  "title": "Certification Apply",
+  "subtitle": "Take the test and earn your Voxly certification",
+  "form": {
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your full name",
+    "languageLabel": "Select Language",
+    "languagePlaceholder": "Choose a language",
+    "startTest": "Start Test",
+    "submit": "Submit Application"
+  },
+  "languages": {
+    "english": "English",
+    "spanish": "Spanish",
+    "french": "French",
+    "german": "German",
+    "mandarin": "Mandarin Chinese",
+    "japanese": "Japanese",
+    "korean": "Korean",
+    "portuguese": "Portuguese",
+    "italian": "Italian",
+    "russian": "Russian"
+  },
+  "test": {
+    "title": "Language Proficiency Test",
+    "question": "Question",
+    "of": "of",
+    "timeLimit": "Time limit: 30 minutes",
+    "passingScore": "Passing score: 50%",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish Test"
+  },
+  "results": {
+    "title": "Test Results",
+    "passed": "Congratulations! You Passed!",
+    "failed": "Keep Learning!",
+    "score": "Your Score",
+    "percentage": "%",
+    "passMessage": "Great job! You've demonstrated solid understanding of the language.",
+    "failMessage": "Don't give up! Review the material and try again.",
+    "retake": "Retake Test",
+    "downloadCertificate": "Download Certificate",
+    "applyAgain": "Apply Again"
+  },
+  "certificate": {
+    "title": "Certificate of Completion",
+    "presentedTo": "This is to certify that",
+    "hasCompleted": "has successfully completed the",
+    "languageTest": "language proficiency test",
+    "withScore": "with a score of",
+    "date": "Date",
+    "voxly": "Voxly",
+    "verified": "Verified Certification"
+  },
+  "errors": {
+    "nameRequired": "Please enter your name",
+    "languageRequired": "Please select a language",
+    "nameMinLength": "Name must be at least 2 characters"
+  }
+}
+

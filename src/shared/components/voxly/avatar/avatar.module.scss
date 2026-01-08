@@ -1,0 +1,243 @@
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatarContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.mainCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #6C63FF 0%, #4834d4 100%);
+    border-radius: 50%;
+    box-shadow: 
+        0 10px 40px rgba(108, 99, 255, 0.3),
+        inset 0 -5px 20px rgba(0, 0, 0, 0.1),
+        inset 0 5px 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.innerGlow {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+    background: radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 80px;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    margin: 0 auto;
+}
+
+.eye {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pupil {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        width: 4px;
+        height: 4px;
+        background: white;
+        border-radius: 50%;
+    }
+}
+
+.mouth {
+    width: 50px;
+    height: 20px;
+    margin: 12px auto 0;
+    color: #333;
+    overflow: hidden;
+}
+
+.mouthSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.speaking .mouth path {
+    animation: talk 0.3s ease-in-out infinite;
+}
+
+@keyframes talk {
+    0%, 100% {
+        d: path('M 5 15 Q 20 25 35 15');
+    }
+    50% {
+        d: path('M 5 12 Q 20 28 35 12');
+    }
+}
+
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(108, 99, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.wave1 {
+    width: 180px;
+    height: 180px;
+    animation: ripple 1.5s ease-out infinite;
+}
+
+.wave2 {
+    width: 180px;
+    height: 180px;
+    animation: ripple 1.5s ease-out infinite 0.5s;
+}
+
+.wave3 {
+    width: 180px;
+    height: 180px;
+    animation: ripple 1.5s ease-out infinite 1s;
+}
+
+@keyframes ripple {
+    0% {
+        width: 160px;
+        height: 160px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 240px;
+        height: 240px;
+        opacity: 0;
+    }
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.statusDot {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.statusDot.pulse {
+    background: #6C63FF;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+.statusText {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+}
+
+@media screen and (max-width: 480px) {
+    .avatarContainer {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .mainCircle {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .face {
+        width: 80px;
+        height: 65px;
+    }
+    
+    .eyes {
+        width: 55px;
+    }
+    
+    .eye {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .pupil {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .mouth {
+        width: 40px;
+        height: 16px;
+    }
+    
+    .wave1 {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .wave2 {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .wave3 {
+        width: 140px;
+        height: 140px;
+    }
+}
+

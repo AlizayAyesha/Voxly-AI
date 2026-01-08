@@ -1,0 +1,260 @@
+.languageSelector {
+    position: relative;
+    z-index: 1000;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--k-color-text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.globe {
+    display: flex;
+    color: var(--k-color-text-secondary);
+}
+
+.currentLocale {
+    font-weight: 500;
+}
+
+.chevron {
+    transition: transform 0.2s ease;
+    color: var(--k-color-text-secondary);
+
+    &ChevronOpen {
+        transform: rotate(180deg);
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 360px;
+    max-height: 480px;
+    background: var(--k-color-bg-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search {
+    position: relative;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--k-color-text-secondary);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--k-color-text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+
+    &::placeholder {
+        color: var(--k-color-text-secondary);
+    }
+
+    &:focus {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+}
+
+.section {
+    margin-bottom: 8px;
+}
+
+.sectionTitle {
+    padding: 8px 12px 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--k-color-text-secondary);
+}
+
+.languageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--k-color-text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    text-align: left;
+    transition: all 0.15s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    &OptionActive {
+        background: rgba(108, 99, 255, 0.1);
+        color: var(--k-color-theme-primary);
+
+        &:hover {
+            background: rgba(108, 99, 255, 0.15);
+        }
+    }
+}
+
+.optionGrid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 8px 12px;
+}
+
+.langName {
+    font-weight: 500;
+}
+
+.langNative {
+    font-size: 12px;
+    color: var(--k-color-text-secondary);
+}
+
+.checkIcon {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    color: var(--k-color-theme-primary);
+}
+
+.noResults {
+    padding: 32px 16px;
+    text-align: center;
+    color: var(--k-color-text-secondary);
+    font-size: 14px;
+}
+
+// Dark theme override for light backgrounds
+:global(.theme-light) {
+    .trigger {
+        border-color: rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .dropdown {
+        background: #fff;
+        border-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .search {
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .searchInput {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: rgba(0, 0, 0, 0.1);
+
+        &:focus {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        &::placeholder {
+            color: var(--k-color-text-secondary);
+        }
+    }
+
+    .content {
+        &::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .option {
+        &:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        &OptionActive {
+            background: rgba(108, 99, 255, 0.08);
+        }
+    }
+}
+

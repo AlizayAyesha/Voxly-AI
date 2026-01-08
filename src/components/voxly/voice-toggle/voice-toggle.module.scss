@@ -1,0 +1,71 @@
+.voiceToggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #5a5a7a;
+}
+
+.buttons {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: #f0e8ff;
+    border-radius: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #6C63FF;
+    }
+
+    &.active {
+        background: #fff;
+        color: #6C63FF;
+        box-shadow: 0 2px 8px rgba(108, 99, 255, 0.15);
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    display: none;
+
+    @media screen and (min-width: 480px) {
+        display: inline;
+    }
+}
+
+// Responsive
+@media screen and (max-width: 480px) {
+    .voiceToggle {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .option {
+        padding: 8px 12px;
+    }
+}
+

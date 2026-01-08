@@ -1,0 +1,94 @@
+{
+  "title": "Explore the <span>Voxly</span> Language Universe",
+  "suptitle": "Our ecosystem",
+  "text": "Join a global, voice-first learning crew — practice real convos, explore languages, and build fluency with confidence.",
+  "joinOurEcosystem": "Join the crew",
+
+  "statLabel": "100+ Collaborators",
+  "certificationLabel": "80%+ Pass Rate",
+
+  "dapps": "LANGUAGES",
+  "searchProjects": "Search languages or modes...",
+  "allTypes": "all levels",
+  "allCategories": "all languages",
+  "lastUpdated": "Last updated",
+  "viewMore": "View more",
+
+  "grant": {
+    "suptitle": "Creator Program",
+    "text": "Teaching languages through voice? <br></br> <span>Link up with Voxly.</span>",
+    "applyText": "Apply as a creator",
+    "contactUs": "Learn more"
+  },
+
+  "certification": {
+    "title": "Get Certified",
+    "description": "Pass your language test and unlock a cert that actually means something worldwide.",
+    "passingGrade": "Crush it with 80%+",
+    "globallyRecognized": "Worldwide Recognition"
+  },
+
+  "disclaimer": {
+    "subtitle": ""
+  },
+
+  "joinCrew": {
+    "metaDescription": "Apply to join the Voxly community crew and help shape the future of voice-first language learning.",
+    "successMetaDescription": "Your application to join the Voxly crew has been submitted successfully.",
+    "title": "Join the Crew",
+    "subtitle": "Become part of our global voice-first learning community. We're looking for passionate language learners and speakers to help shape the future of Voxly.",
+    
+    "personalInfo": "Personal Information",
+    "socialInfo": "Social Connections",
+    "languageInfo": "Language Background",
+    "motivationInfo": "Your Motivation",
+    
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "discord": "Discord Username",
+      "discordPlaceholder": "username#0000",
+      "twitter": "Twitter/X Handle",
+      "twitterPlaceholder": "@username",
+      "languages": "Languages You Speak",
+      "languagesPlaceholder": "e.g., English, Spanish, French",
+      "experience": "Teaching/Tutoring Experience",
+      "experiencePlaceholder": "Tell us about any language teaching or tutoring experience...",
+      "motivation": "Why do you want to join?",
+      "motivationPlaceholder": "Share your motivation for joining the Voxly crew...",
+      "referral": "How did you hear about us?",
+      "referralPlaceholder": "Select an option"
+    },
+    
+    "referralOptions": {
+      "twitter": "Twitter/X",
+      "discord": "Discord",
+      "friend": "Friend/Colleague",
+      "search": "Search Engine",
+      "other": "Other"
+    },
+    
+    "errors": {
+      "nameRequired": "Please enter your name",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Please enter your email address",
+      "emailInvalid": "Please enter a valid email address",
+      "discordRequired": "Please enter your Discord username",
+      "languagesRequired": "Please enter the languages you speak",
+      "motivationRequired": "Please tell us why you want to join",
+      "motivationMinLength": "Please provide more detail (at least 20 characters)"
+    },
+    
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    
+    "successTitle": "Application Submitted!",
+    "successMessage": "Thank you for your interest in joining the Voxly crew.",
+    "successDetails": "We've received your application and will review it shortly. If your profile matches our current needs, you'll receive an invitation to join our Discord community within 5-7 business days.",
+    "submitAnother": "Submit Another Application",
+    "backToEcosystem": "Back to Ecosystem"
+  }
+}
+

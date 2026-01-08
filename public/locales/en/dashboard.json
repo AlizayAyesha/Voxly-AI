@@ -1,0 +1,81 @@
+{
+    "meta": {
+        "title": "Dashboard – Voxly",
+        "description": "Track your language learning progress, practice conversations, and grow your fluency with AI"
+    },
+    "hero": {
+        "title": "Dashboard",
+        "subtitle": "Welcome back to Voxly. Track your language progress, practice conversations, and grow your fluency with AI.",
+        "cta": "Start Today's Practice"
+    },
+    "stats": {
+        "title": "Your Stats",
+        "speakingMinutes": "Total Speaking Minutes",
+        "speakingMinutesValue": "127",
+        "languagesLearning": "Languages Learning",
+        "languagesLearningValue": "3",
+        "streak": "Day Streak",
+        "streakValue": "7",
+        "fluencyScore": "Fluency Score",
+        "fluencyScoreValue": "72%",
+        "projects": "Projects",
+        "projectsValue": "12",
+        "achievements": "Achievements",
+        "achievementsValue": "8",
+        "activity": "Activity Level",
+        "activityValue": "85%"
+    },
+    "quickActions": {
+        "title": "Quick Actions",
+        "startTalking": "Start Talking",
+        "startTalkingDesc": "Practice live conversations with your AI teacher",
+        "takeQuiz": "Take a Quiz",
+        "takeQuizDesc": "Test vocabulary and sentence formation",
+        "viewProgress": "View Progress",
+        "viewProgressDesc": "Track fluency, streaks, and improvements",
+        "certifications": "Certifications",
+        "certificationsDesc": "Work toward Voxly language certificates"
+    },
+    "weeklyProgress": {
+        "title": "Weekly Speaking Goal",
+        "daysActive": "5 / 7 days active",
+        "continue": "Keep it up! You're doing great!"
+    },
+    "languagesInProgress": {
+        "title": "Languages in Progress",
+        "spanish": "Spanish",
+        "spanishLevel": "Intermediate",
+        "spanishProgress": "72%",
+        "french": "French",
+        "frenchLevel": "Beginner",
+        "frenchProgress": "38%",
+        "german": "German",
+        "germanLevel": "Beginner",
+        "germanProgress": "21%",
+        "continuePractice": "Continue Practice"
+    },
+    "activity": {
+        "title": "Recent Learning Activity",
+        "item1": "Completed a vocabulary lesson",
+        "item1Lang": "Spanish",
+        "item1Time": "2 hours ago",
+        "item2": "Spoke with AI teacher for 12 minutes",
+        "item2Lang": "French",
+        "item2Time": "5 hours ago",
+        "item3": "First conversation completed",
+        "item3Lang": "Arabic",
+        "item3Time": "1 day ago"
+    },
+    "achievements": {
+        "title": "Recent Achievements",
+        "spanishBasics": "Spanish Basics Completed",
+        "streak": "7-Day Speaking Streak",
+        "firstConversation": "First Voice Conversation"
+    },
+    "bottomCta": {
+        "title": "Ready for Your Next Conversation?",
+        "subtitle": "Practice makes perfect. Start talking with Voxly today!",
+        "button": "Start Talking Now"
+    }
+}
+

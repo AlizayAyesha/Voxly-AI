@@ -1,0 +1,88 @@
+<parameter name="content">import React, { useState, useEffect, useRef } from 'react';
+import clsx from 'clsx';
+import css from './mic-button.module.scss';
+
+interface MicButtonProps {
+    isListening: boolean;
+    isProcessing: boolean;
+    onToggleListen: () => void;
+    disabled?: boolean;
+    className?: string;
+}
+
+export const MicButton: React.FC<MicButtonProps> = ({
+    isListening,
+    isProcessing,
+    onToggleListen,
+    disabled = false,
+    className
+}) => {
+    const [audioLevel, setAudioLevel] = useState(0);
+    const animationRef = useRef<number>();
+    
+    useEffect(() => {
+        if (isListening && !isProcessing) {
+            const simulateAudio = () => {
+                setAudioLevel(Math.random() * 0.5 + 0.1);
+                animationRef.current = requestAnimationFrame(simulateAudio);
+            };
+            animationRef.current = requestAnimationFrame(simulateAudio);
+        } else {
+            setAudioLevel(0);
+            if (animationRef.current) {
+                cancelAnimationFrame(animationRef.current);
+            }
+        }
+        
+        return () => {
+            if (animationRef.current) {
+                cancelAnimationFrame(animationRef.current);
+            }
+        };
+    }, [isListening, isProcessing]);
+    
+    return (
+        <div className={clsx(css.container, className)}>
+            <button
+                className={clsx(
+                    css.button,
+                    isListening && css.listening,
+                    isProcessing && css.processing,
+                    disabled && css.disabled
+                )}
+                onClick={onToggleListen}
+                disabled={disabled}
+                aria-label={isListening ? 'Stop listening' : 'Start listening'}
+            >
+                {isProcessing ? (
+                    <div className={css.spinner} />
+                ) : isListening ? (
+                    <>
+                        <div className={css.wave} style={{ transform: `scale(${1 + audioLevel})` }} />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <line x1="1" y1="1" x2="23" y2="23" />
+                            <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6" />
+                            <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23" />
+                            <line x1="12" y1="19" x2="12" y2="23" />
+                            <line x1="8" y1="23" x2="16" y2="23" />
+                        </svg>
+                    </>
+                ) : (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" y1="19" x2="12" y2="23" />
+                        <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg>
+                )}
+            </button>
+            
+            <span className={css.label}>
+                {isProcessing ? 'Processing...' : isListening ? 'Listening...' : 'Tap to speak'}
+            </span>
+        </div>
+    );
+};
+
+export default MicButton;
+</parameter>

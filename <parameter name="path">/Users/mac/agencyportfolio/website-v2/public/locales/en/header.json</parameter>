@@ -1,0 +1,68 @@
+{
+    "navigation": [
+        {
+            "name": "Home",
+            "links": [
+                { "name": "About", "url": "/about", "icon": "/img/icons/nav-about.svg" },
+                { "name": "sassssets", "url": "/sasssets", "icon": "/img/icons/nav-bsasst.svg" },
+                { "name": "Careers", "url": "/careers", "icon": "/img/icons/nav-careers.svg" }
+            ]
+        },
+        {
+            "name": "Learn",
+            "links": [
+                { "name": "Languages", "url": "/ecosystem", "icon": "/img/icons/nav-ecosystem.svg" },
+                { "name": "Certification", "url": "/certification-apply", "icon": "/img/icons/nav-docs.svg" },
+                { "name": "Creator Program", "url": "/grant-program", "icon": "/img/icons/nav-grants.svg" },
+                { "name": "Events", "url": "/events", "icon": "/img/icons/nav-events.svg" }
+            ]
+        },
+        {
+            "name": "Community",
+            "links": [
+                { "name": "Blog", "url": "/blog", "icon": "/img/icons/nav-blog.svg" },
+                { "name": "Chat Hub", "url": "/chat-hub", "icon": "/img/icons/nav-taikoons.svg" }
+            ]
+        },
+        {
+            "name": "Support",
+            "links": [
+                { "name": "Docs", "url": "/docs", "icon": "/img/icons/nav-docs.svg" },
+                { "name": "Help Center", "url": "/help", "icon": "/img/icons/nav-docs.svg" }
+            ]
+        },
+         {
+            "name": "User demo",
+            "links": [
+                { "name": "Dashboard", "url": "/Dashboard", "icon": "/img/icons/nav-docs.svg" },
+                { "name": "Settings", "url": "/Settings", "icon": "/img/icons/nav-docs.svg" }
+            ]
+        }
+
+    ],
+    "actions": {
+        "docs": "Docs",
+        "github": "GitHub",
+        "chatHub": "Chat Hub"
+    },
+    "buttons": {
+        "docs": "Start Learning"
+    },
+    "search": {
+        "placeholder": "Search..."
+    },
+    "socials": [
+        {
+            "icon": "socials:twitter",
+            "url": ""
+        },
+        {
+            "icon": "socials:discord",
+            "url": ""
+        },
+        {
+            "icon": "socials:github",
+            "url": ""
+        }
+    ]
+}

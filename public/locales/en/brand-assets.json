@@ -1,0 +1,112 @@
+{
+    "hero": {
+        "title": "Our <span>sass</span> vibes",
+        "text": "Everything you need to represent Voxly — colors, fonts, tone, and aesthetic."
+    },
+    "logo": {
+        "suptitle": "Voxly Logo",
+        "button": "Grab the logo",
+        "logos": [
+            {
+                "id": 1,
+                "img": "/img/sasstaiko.zip",
+                "background": "#F3F3F3"
+            },
+            {
+                "id": 2,
+                "img": "/img/sasslogo-pw.svg",
+                "background": "#10151B"
+            },
+            {
+                "id": 3,
+                "img": "/img/sasslogo-ww.svg",
+                "background": "#E81899"
+            },
+            {
+                "id": 4,
+                "img": "/img/sass/logo-pw.svg",
+                "background": "url(/img/sass/logo-background-1.jpg)",
+                "backgroundImage": "url(/img/sass/background.jpg)"
+            }
+        ]
+    },
+    "colorPalette": {
+        "suptitle": "Color palette",
+        "colors": [
+            {
+                "title": "Primary",
+                "items": [
+                    { "name": "Voxly Purple", "color": "#6C63FF" },
+                    { "name": "Deep Dark", "color": "#0B101B" }
+                ]
+            },
+            {
+                "title": "Secondary",
+                "items": [
+                    { "name": "", "color": "#6ECFB0" },
+                    { "name": "", "color": "#FC6264" },
+                    { "name": "", "color": "#FFE2A0" },
+                    { "name": "", "color": "#FFFFFF" }
+                ]
+            }
+        ]
+    },
+    "topography": {
+        "suptitle": "Typography",
+        "title": "Typefaces that match our energy",
+        "downloadFont": "Grab the fonts",
+        "list": [
+            {
+                "title": "Clash Grotesk",
+                "text": "Our main font — bold, clear, and unapologetically modern. Perfect for headlines that hit hard."
+            },
+            {
+                "title": "Public Sans",
+                "text": "Our go-to for everything else. Clean, readable, and easy on the eyes."
+            }
+        ],
+        "fonts": [
+            {
+                "title": "Primary",
+                "fontFamily": "Clash Grotesk",
+                "font": "/img/sass/fonts-grotesk.svg",
+                "variants": [
+                    {
+                        "name": "Clash Grotesk Semibold",
+                        "weight": 600
+                    },
+                    {
+                        "name": "Clash Grotesk Medium",
+                        "weight": 500
+                    }
+                ],
+                "url": "/files/ClashGrotesk.zip"
+            },
+            {
+                "title": "Secondary",
+                "fontFamily": "Public Sans",
+                "font": "/img/sass/fonts-sans.svg",
+                "variants": [
+                    {
+                        "name": "Public Sans Bold",
+                        "weight": 700
+                    },
+                    {
+                        "name": "Public Sans Medium",
+                        "weight": 500
+                    },
+                    {
+                        "name": "Public Sans Regular",
+                        "weight": 400
+                    }
+                ],
+                "url": "/files/PublicSans.zip"
+            }
+        ]
+    },
+    "sassBook": {
+        "title": "Our Sass Docs",
+        "button": "none"
+    }
+}
+

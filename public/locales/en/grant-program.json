@@ -1,0 +1,102 @@
+{
+    "hero": {
+        "title": "Welcome to <span>Voxly!</span>",
+        "text": "Voxly is a creator program designed to discover and support amazing language tutors and content creators. Get resources to grow your audience and level up your teaching game."
+    },
+    "keyDates": {
+        "title": "Key Dates",
+        "dateTitle": "date",
+        "descriptionTitle": "description",
+        "items": [
+            {
+                "date": "Ongoing",
+                "description": "Welcome to Voxly! Apply now and join our creator crew."
+            }
+        ]
+    },
+    "mission": {
+        "title": "Voxly <span>mission</span>",
+        "items": [
+            {
+                "icon": "/img/grant/mission-icon-1.svg",
+                "title": "Spot and support fire language creators",
+                "text": "We hook up tutors with sick content up with the platform and resources they need to create."
+            }, {
+                "icon": "/img/grant/mission-icon-2.svg",
+                "title": "Enable creative teaching",
+                "text": "Helping creators build unique content that draws new learners to Voxly."
+            }, {
+                "icon": "/img/grant/mission-icon-3.svg",
+                "title": "Bring on established tutors",
+                "text": "Getting the names everyone knows onto Voxly and helping them reach new learners."
+            }, {
+                "icon": "/img/grant/mission-icon-4.svg",
+                "title": "Attract passionate learners",
+                "text": "Finding active community members who share our vibe and bringing them into the crew."
+            }
+        ]
+    },
+    "community": {
+        "suptitle": "Community-first vibes",
+        "title": "We believe <span>deeply</span> in the power of learning community, and welcome all creators who share this vision and believe in a more <span>inclusive</span>, <span>accessible</span>, and <span>fluent future</span>",
+        "text": "We also recognize that Voxly would be nothing without its creators and community, and so we see our supported creators as integral extensions of the Voxly team. As we look to grow and evolve, we expect the line between established tutors and new talent to become even more blurred. \nAlong with launching our creator program, we also seek to experiment with new formats. That can mean the duration, style, mentorship approach, and much more is up for experimentation and iteration. For our program and all community initiatives, we are driven by our desire to achieve the best outcomes for our learning community — how we get there and who leads the way is something we want to shape together with you and the community. Hence, this is only the start of what we hope will be a long and collaborative journey for our community. \nFor now, if you have ideas on how we can support creators better, we'd like to have this conversation with you. Please share your ideas — as detailed or brief as you see fit.",
+        "learnMore": "Learn more about our program"
+    },
+    "track": {
+        "title": "Program Tracks",
+        "applyNow": "Apply now",
+        "items": [
+            {
+                "icon": "/img/grant/track-icon-1.svg",
+                "title": "New Creator",
+                "track": "Track",
+                "link": "/",
+                "text": "The New Creator Track is for fresh faces in language teaching. We're looking for new talent. It could be anything from conversation practice, grammar deep dives, to cultural content — everything's welcome!",
+                "timeline": "The New Creator Track is <b>Open</b>",
+                "active": true
+            }, 
+            {
+                "icon": "/img/grant/track-icon-2.svg",
+                "title": "Established Tutor",
+                "track": "Track",
+                "link": "/",
+                "text": "The Established Tutor Track is for experienced language teachers. This track is suitable for creators who are already established, have a following, and a unique teaching style. \n\n The track could also be suitable for tutoring services looking to partner with Voxly. The goal is to onboard the names everyone knows to our platform.",
+                "timeline": "The Established Tutor Track is <b>Open</b>",
+                "active": true
+            }, 
+            {
+                "icon": "/img/grant/track-icon-3.svg",
+                "title": "Special Projects",
+                "track": "Track",
+                "link": "/",
+                "text": "The Special Projects Track is for experienced creators or teams who want to work on unique content projects. These will typically be specific requests for courses, collaborations, or innovative learning solutions. We invite proposals from creative minds.\n\nApplications are open to anyone, including experienced tutors and new talent.",
+                "timeline": "The Special Projects Track is <b>Open</b>",
+                "active": true
+            }
+        ]
+    },
+    "support": {
+        "title": "Support & <span>FAQs</span>",
+        "text": "Got questions? Join our <u>community</u> or hit us up.",
+        "faqs": [
+            {
+                "q": "Are new tutors welcome?",
+                "a": "Absolutely! As long as your content aligns with our vision. New voices and fresh teaching styles are especially encouraged."
+            }, {
+                "q": "How many creators get accepted?",
+                "a": "No fixed number. It's based on the quality and creativity of applications."
+            }, {
+                "q": "What support do I get?",
+                "a": "We provide mentorship, platform exposure, and resources to help grow your audience. Each accepted creator gets personalized support."
+            }, {
+                "q": "After I submit, what's next?",
+                "a": "Once you submit, our team will review and come back with suggestions, follow-up questions, and/or requests for a chat. Stay responsive during this phase!"
+            }
+        ]
+    },
+    "banner": {
+        "title": "Learn more about applying",
+        "learnMore": "Get the details"
+    }
+}
+

@@ -1,0 +1,70 @@
+{
+    "meta": {
+        "title": "Start Talking – Voxly",
+        "description": "Practice languages with Voxly AI - your personal conversation partner"
+    },
+    "title": "Start Talking with Voxly",
+    "subtitle": "Practice conversations with your AI language partner",
+    "selectLanguage": "Choose your practice language",
+    "startButton": "Start Conversation",
+    "stopButton": "Finish",
+    "tapToSpeak": "Tap to speak",
+    "listening": "Listening...",
+    "startPrompt": "Press 'Start Conversation' to begin your practice session",
+    "header": {
+        "title": "Start Talking with Voxly",
+        "subtitle": "Practice conversations with your AI language partner"
+    },
+    "sidebar": {
+        "title": "Your Progress",
+        "streak": "day streak",
+        "wordsLearned": "Words Learned",
+        "conversations": "Conversations",
+        "dailyGoal": "Daily Goal",
+        "tabs": {
+            "history": "History",
+            "vocabulary": "Vocabulary",
+            "quiz": "Quiz"
+        },
+        "emptyHistory": "No conversation history yet",
+        "emptyVocabulary": "Words you struggle with will appear here"
+    },
+    "quiz": {
+        "title": "Test Your Knowledge!",
+        "description": "Take a quick quiz based on your recent conversation to reinforce what you've learned.",
+        "startQuiz": "Start Quiz",
+        "question": "Question",
+        "of": "of",
+        "next": "Next Question",
+        "results": "See Results",
+        "done": "Done",
+        "complete": "Quiz Complete!",
+        "perfectScore": "Perfect score! You're doing amazing!",
+        "goodJob": "Good job! Keep practicing!",
+        "keepLearning": "Keep learning, you'll improve!",
+        "score": "Your Score"
+    },
+    "voice": {
+        "label": "AI Voice:",
+        "female": "Female",
+        "male": "Male"
+    },
+    "permission": {
+        "denied": "Microphone access denied. Please enable it in settings.",
+        "hint": "Tap to speak"
+    },
+    "greetings": {
+        "spanish": "¡Hola! I'm your Voxly conversation partner. Let's practice Spanish together!",
+        "french": "Bonjour! I'm your Voxly conversation partner. Let's practice French together!",
+        "german": "Guten Tag! I'm your Voxly conversation partner. Let's practice German together!",
+        "italian": "Ciao! I'm your Voxly conversation partner. Let's practice Italian together!",
+        "portuguese": "Olá! I'm your Voxly conversation partner. Let's practice Portuguese together!",
+        "chinese": "Nǐ hǎo! I'm your Voxly conversation partner. Let's practice Chinese together!",
+        "japanese": "Konnichiwa! I'm your Voxly conversation partner. Let's practice Japanese together!",
+        "korean": "Annyeonghaseyo! I'm your Voxly conversation partner. Let's practice Korean together!",
+        "russian": "Privet! I'm your Voxly conversation partner. Let's practice Russian together!",
+        "arabic": "Marhaba! I'm your Voxly conversation partner. Let's practice Arabic together!",
+        "default": "Hello! I'm your Voxly conversation partner. Let's practice together!"
+    }
+}
+

@@ -1,0 +1,143 @@
+<parameter name="content">import React, { useState } from 'react';
+import clsx from 'clsx';
+import css from './quiz-popup.module.scss';
+
+interface QuizQuestion {
+    id: number;
+    question: string;
+    options: string[];
+    correctAnswer: number;
+}
+
+interface QuizPopupProps {
+    isOpen: boolean;
+    onClose: () => void;
+    questions: QuizQuestion[];
+    onComplete: (score: number) => void;
+}
+
+export const QuizPopup: React.FC<QuizPopupProps> = ({
+    isOpen,
+    onClose,
+    questions,
+    onComplete
+}) => {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+    const [score, setScore] = useState(0);
+    const [showResult, setShowResult] = useState(false);
+    
+    if (!isOpen) return null;
+    
+    const handleAnswer = (answerIndex: number) => {
+        setSelectedAnswer(answerIndex);
+        
+        setTimeout(() => {
+            const isCorrect = answerIndex === questions[currentQuestion].correctAnswer;
+            if (isCorrect) {
+                setScore(prev => prev + 1);
+            }
+            
+            setSelectedAnswer(null);
+            
+            if (currentQuestion < questions.length - 1) {
+                setCurrentQuestion(prev => prev + 1);
+            } else {
+                setShowResult(true);
+                onComplete(score + (isCorrect ? 1 : 0));
+            }
+        }, 1000);
+    };
+    
+    const handleRestart = () => {
+        setCurrentQuestion(0);
+        setSelectedAnswer(null);
+        setScore(0);
+        setShowResult(false);
+    };
+    
+    const handleClose = () => {
+        onClose();
+        setTimeout(handleRestart, 300);
+    };
+    
+    return (
+        <div className={css.overlay} onClick={handleClose}>
+            <div className={css.popup} onClick={e => e.stopPropagation()}>
+                <button className={css.closeButton} onClick={handleClose}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                
+                <div className={css.header}>
+                    <h2 className={css.title}>Vocabulary Quiz</h2>
+                    <span className={css.progress}>
+                        {showResult ? 'Complete' : `Question ${currentQuestion + 1} of ${questions.length}`}
+                    </span>
+                </div>
+                
+                {showResult ? (
+                    <div className={css.result}>
+                        <div className={css.scoreCircle}>
+                            <span className={css.scoreValue}>
+                                {Math.round((score / questions.length) * 100)}%
+                            </span>
+                        </div>
+                        <p className={css.resultText}>
+                            {score === questions.length ? 'Perfect! 🎉' :
+                             score >= questions.length / 2 ? 'Good job! 👍' :
+                             'Keep practicing! 💪'}
+                        </p>
+                        <p className={css.scoreDetail}>
+                            You got {score} out of {questions.length} correct
+                        </p>
+                        <button className={css.restartButton} onClick={handleRestart}>
+                            Try Again
+                        </button>
+                    </div>
+                ) : (
+                    <>
+                        <div className={css.progressBar}>
+                            <div 
+                                className={css.progressFill} 
+                                style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }} 
+                            />
+                        </div>
+                        
+                        <div className={css.questionSection}>
+                            <h3 className={css.question}>
+                                {questions[currentQuestion].question}
+                            </h3>
+                            
+                            <div className={css.options}>
+                                {questions[currentQuestion].options.map((option, index) => (
+                                    <button
+                                        key={index}
+                                        className={clsx(
+                                            css.option,
+                                            selectedAnswer === index && css.selected,
+                                            selectedAnswer === index && 
+                                                index === questions[currentQuestion].correctAnswer && css.correct,
+                                            selectedAnswer === index && 
+                                                index !== questions[currentQuestion].correctAnswer && css.wrong
+                                        )}
+                                        onClick={() => handleAnswer(index)}
+                                        disabled={selectedAnswer !== null}
+                                    >
+                                        <span className={css.optionLetter}>
+                                            {String.fromCharCode(65 + index)}
+                                        </span>
+                                        {option}
+                                    </button>
+                                ))}
+                            </div>
+                    </>
+                )}
+            </div>
+    );
+};
+
+export default QuizPopup;
+</parameter>

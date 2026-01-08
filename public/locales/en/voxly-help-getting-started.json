@@ -1,0 +1,89 @@
+{
+    "meta": {
+        "title": "Getting Started - Voxly Help Center",
+        "description": "Learn how to get started with Voxly AI Language Tutor"
+    },
+    "hero": {
+        "title": "Getting Started with Voxly",
+        "subtitle": "Your journey to language fluency starts here"
+    },
+    "sections": {
+        "welcome": {
+            "title": "Welcome to Voxly!",
+            "content": "Voxly is your AI-powered language learning companion that helps you practice real conversations in your target language. Whether you're a beginner or advanced learner, Voxly adapts to your level and helps you improve every day."
+        },
+        "firstConversation": {
+            "title": "Starting Your First Conversation",
+            "id": "start-conversation",
+            "steps": [
+                {
+                    "title": "Choose Your Language",
+                    "content": "Select the language you want to learn from the dropdown menu at the top of the conversation screen. Voxly currently supports 12 languages including Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Russian, Arabic, Hindi, and English."
+                },
+                {
+                    "title": "Enable Voice (Optional)",
+                    "content": "Toggle the voice button if you want to practice speaking. This requires microphone access. You can practice both by speaking and typing."
+                },
+                {
+                    "title": "Start the Conversation",
+                    "content": "Click the 'Start Conversation' button. Voxly will greet you in your target language and you can begin practicing!"
+                },
+                {
+                    "title": "Keep Practicing",
+                    "content": "The more you practice, the more Voxly learns about your level and preferences. Your progress is tracked automatically."
+                }
+            ]
+        },
+        "changeLanguage": {
+            "title": "Changing Your Learning Language",
+            "id": "change-language",
+            "content": "To change your target language, simply select a different language from the dropdown menu at the top of the conversation screen. You can switch languages at any time - your progress is saved separately for each language.",
+            "note": "Note: Switching languages will clear your current conversation but your vocabulary and progress data is preserved."
+        },
+        "understandingInterface": {
+            "title": "Understanding the Interface",
+            "id": "interface",
+            "content": "The Voxly interface is designed to be intuitive and focused on conversation practice.",
+            "elements": [
+                {
+                    "name": "Chat Area",
+                    "description": "This is where your conversation with Voxly appears. Messages from the AI are shown in purple bubbles, your messages in light purple."
+                },
+                {
+                    "name": "Avatar",
+                    "description": "The animated avatar shows when Voxly is speaking. The avatar animates and pulses during speech."
+                },
+                {
+                    "name": "Sidebar",
+                    "description": "On the right side, you'll find your conversation history, vocabulary tips, and learning statistics."
+                },
+                {
+                    "name": "Microphone Button",
+                    "description": "Click to speak your responses. The button pulses when recording."
+                },
+                {
+                    "name": "Quiz Button",
+                    "description": "After conversations, you can take quizzes to test your understanding."
+                }
+            ]
+        },
+        "tips": {
+            "title": "Tips for Success",
+            "id": "tips",
+            "items": [
+                "Practice daily, even if it's just for 5 minutes",
+                "Don't be afraid to make mistakes - that's how you learn",
+                "Use the voice feature to practice pronunciation",
+                "Review your vocabulary tips after each conversation",
+                "Take quizzes to reinforce what you've learned",
+                "Start with simple phrases and gradually increase complexity"
+            ]
+        }
+    },
+    "nextSteps": {
+        "title": "Next Steps",
+        "exploreFeatures": "Explore Features",
+        "viewFaq": "View FAQ"
+    }
+}
+

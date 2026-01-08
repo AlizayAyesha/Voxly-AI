@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Voxly Help Center",
+        "description": "Get help with Voxly AI Language Tutor - guides, FAQs, and troubleshooting"
+    },
+    "hero": {
+        "title": "Voxly Help Center",
+        "subtitle": "Your guide to mastering language learning with AI-powered conversations",
+        "searchPlaceholder": "Search for help..."
+    },
+    "categories": {
+        "gettingStarted": {
+            "title": "Getting Started",
+            "description": "Learn the basics and set up your first conversation",
+            "icon": "rocket"
+        },
+        "features": {
+            "title": "Features Guide",
+            "description": "Explore all the powerful features Voxly offers",
+            "icon": "star"
+        },
+        "faq": {
+            "title": "FAQ",
+            "description": "Find answers to frequently asked questions",
+            "icon": "question"
+        },
+        "troubleshooting": {
+            "title": "Troubleshooting",
+            "description": "Solutions to common issues and problems",
+            "icon": "wrench"
+        },
+        "tips": {
+            "title": "Tips & Tricks",
+            "description": "Advanced strategies for effective language learning",
+            "icon": "lightbulb"
+        },
+        "contact": {
+            "title": "Contact Support",
+            "description": "Get in touch with our team for personalized help",
+            "icon": "support"
+        }
+    },
+    "quickLinks": {
+        "title": "Quick Links",
+        "startConversation": "Start Your First Conversation",
+        "languageSettings": "Language Settings",
+        "voiceSettings": "Voice Settings",
+        "progressTracking": "Track Your Progress"
+    },
+    "popularArticles": {
+        "title": "Popular Articles",
+        "howToStart": "How to start your first conversation",
+        "voiceNotWorking": "Voice recognition not working",
+        "changeLanguage": "How to change your learning language",
+        "quizFeature": "Understanding the quiz feature"
+    },
+    "footer": {
+        "needMoreHelp": "Need more help?",
+        "contactDescription": "Our support team is here to assist you",
+        "contactButton": "Contact Support"
+    }
+}
+

@@ -1,0 +1,112 @@
+{
+    "meta": {
+        "title": "Help Center - Get Support & Find Answers",
+        "description": "Find answers to common questions, get help with using our platform, and contact our support team."
+    },
+    "hero": {
+        "title": "How can we help you?",
+        "subtitle": "Search our help center or browse categories below to find answers to your questions.",
+        "searchPlaceholder": "Search for help..."
+    },
+    "categories": {
+        "title": "Browse by Category",
+        "items": [
+            {
+                "title": "Getting Started",
+                "description": "Learn the basics and get up and running quickly",
+                "icon": "rocket"
+            },
+            {
+                "title": "Account & Billing",
+                "description": "Manage your account, subscriptions, and payments",
+                "icon": "credit-card"
+            },
+            {
+                "title": "Technical Support",
+                "description": "Troubleshooting and technical questions",
+                "icon": "settings"
+            },
+            {
+                "title": "Features & Tools",
+                "description": "Learn about all the features available",
+                "icon": "grid"
+            },
+            {
+                "title": "Security & Privacy",
+                "description": "Keep your data safe and understand our policies",
+                "icon": "shield"
+            },
+            {
+                "title": "Community & Contact",
+                "description": "Connect with us and get in touch",
+                "icon": "users"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "question": "How do I create an account?",
+                "answer": "Creating an account is easy! Click the 'Sign Up' button in the top right corner of the homepage. You can register using your email address or connect with your Google, GitHub, or social media accounts. Follow the prompts to complete your profile setup."
+            },
+            {
+                "question": "How can I reset my password?",
+                "answer": "If you've forgotten your password, click the 'Forgot Password' link on the login page. Enter your registered email address, and we'll send you a secure link to reset your password. The link expires after 24 hours for security purposes."
+            },
+            {
+                "question": "What payment methods do you accept?",
+                "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise accounts. All payments are processed securely through our payment partners. We do not store your full credit card details on our servers."
+            },
+            {
+                "question": "How do I cancel my subscription?",
+                "answer": "To cancel your subscription, go to Account Settings > Subscription > Cancel Plan. Your access will continue until the end of your current billing period. You can reactivate your subscription at any time. Refunds are available within the first 14 days of a new subscription."
+            },
+            {
+                "question": "Is my data secure?",
+                "answer": "Yes, we take data security very seriously. All data is encrypted in transit and at rest using industry-standard protocols. We are GDPR compliant and never sell your personal data to third parties. You can request a copy or deletion of your data at any time from your account settings."
+            },
+            {
+                "question": "How can I contact support?",
+                "answer": "You can reach our support team via email at support@example.com, through live chat on our website (available 24/7), or by submitting a ticket through our help center. Enterprise customers also have access to a dedicated support manager."
+            },
+            {
+                "question": "Do you offer API access?",
+                "answer": "Yes! We offer API access for developers and enterprises. Check our API documentation at /docs for detailed guides and reference. You can generate API keys from your dashboard under Settings > API. Rate limits apply based on your subscription tier."
+            },
+            {
+                "question": "Can I use this on mobile devices?",
+                "answer": "Absolutely! Our platform is fully responsive and works great on all devices. We also have native iOS and Android apps available for download from the App Store and Google Play Store. Your data syncs automatically across all devices."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Still need help?",
+        "subtitle": "Our support team is here to assist you",
+        "email": {
+            "title": "Email Support",
+            "description": "Get help via email",
+            "email": "support@example.com",
+            "responseTime": "We typically respond within 24 hours"
+        },
+        "chat": {
+            "title": "Live Chat",
+            "description": "Chat with us in real-time",
+            "available": "Available 24/7"
+        },
+        "social": {
+            "title": "Community",
+            "description": "Join our community channels"
+        }
+    },
+    "usefulLinks": {
+        "title": "Useful Links",
+        "items": [
+            { "name": "Documentation", "url": "/docs", "description": "Detailed guides and API reference" },
+            { "name": "Blog", "url": "/blog", "description": "Latest news and updates" },
+            { "name": "Community Forum", "url": "/chathub", "description": "Connect with other users" },
+            { "name": "Status Page", "url": "/status", "description": "Check system status" }
+        ]
+    }
+}
+

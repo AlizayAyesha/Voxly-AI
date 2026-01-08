@@ -1,0 +1,217 @@
+<parameter name="content">.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    padding: 8px;
+    gap: 4px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s ease;
+    flex: 1;
+    
+    svg {
+        flex-shrink: 0;
+    }
+    
+    span {
+        display: none;
+    }
+    
+    &:hover {
+        background: #f0f0f0;
+        color: #333;
+    }
+    
+    &.active {
+        background: #6C63FF;
+        color: white;
+    }
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.sectionTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+
+.emptyText {
+    color: #aaa;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
+.historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.historyItem {
+    padding: 12px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.historyRole {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.historyText {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.vocabList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vocabItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    background: #f0f7ff;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.vocabIcon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6C63FF;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.statLabel {
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+}
+
+.progressSection {
+    margin-bottom: 20px;
+}
+
+.progressTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.progressBar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #6C63FF, #9c8cff);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    font-size: 12px;
+    color: #888;
+}
+
+.quizButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(135deg, #6C63FF 0%, #4834d4 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .tab {
+        span {
+            display: inline;
+        }
+    }
+}
+</parameter>

@@ -1,0 +1,80 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle:hover {
+    border-color: #6C63FF;
+}
+
+.toggle.enabled {
+    border-color: #6C63FF;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(108, 99, 255, 0.05) 100%);
+}
+
+.toggle.enabled .track {
+    background: #6C63FF;
+}
+
+.toggle.enabled .thumb {
+    transform: translateX(20px);
+}
+
+.toggle.enabled .label {
+    color: #6C63FF;
+}
+
+.track {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: #ccc;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+}
+
+@media screen and (max-width: 480px) {
+    .toggle {
+        padding: 6px 12px;
+    }
+    
+    .track {
+        width: 36px;
+        height: 20px;
+    }
+    
+    .thumb {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .label {
+        font-size: 12px;
+    }
+}
+
