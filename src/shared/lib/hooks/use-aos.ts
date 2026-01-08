@@ -27,6 +27,8 @@ export const useAos = ({
 
     return {
         inView,
-        ref: (node: HTMLElement | null) => ref.current = node
+        ref: (node: HTMLElement | null) => {
+            ref.current = node;
+        }
     };
 }
