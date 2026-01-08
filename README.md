@@ -161,29 +161,6 @@ We welcome contributions from developers, educators, and language learning enthu
 
 ---
 
-## 🌟 GitHub Campus Expert Alignment
-
-### Technical Skills Demonstrated
-- ✅ Modern web development (Next.js, TypeScript)
-- ✅ API integration and backend development
-- ✅ AI/ML implementation
-- ✅ Responsive and accessible design
-- ✅ Open-source collaboration
-
-### Community Leadership
-- ✅ Educational technology advocacy
-- ✅ Inclusive learning resources
-- ✅ Documentation and knowledge sharing
-- ✅ Collaborative development practices
-
-### Open Source Commitment
-- ✅ Transparent development process
-- ✅ Welcoming contribution guidelines
-- ✅ Regular updates and maintenance
-- ✅ Community-focused features
-
----
-
 ## 📈 Roadmap
 
 ### Phase 1 - Foundation (Completed)
