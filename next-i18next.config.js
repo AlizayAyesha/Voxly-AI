@@ -1,6 +1,6 @@
 /** @type {import('next-i18next').UserConfig} */
 
-// Reduced language list for Vercel compatibility (under 100 limit)
+// Reduced language list for Vercel compatibility (under 100 limit, no duplicates)
 const languages = [
     'en', // English
     'ar', // Arabic
@@ -19,7 +19,6 @@ const languages = [
     'es', // Spanish
     'sv', // Swedish
     'tr', // Turkish
-    'uk', // Ukrainian
     'vi', // Vietnamese
     'bn', // Bengali
     'da', // Danish
@@ -40,12 +39,7 @@ const languages = [
     'ca', // Catalan
     'fa', // Persian
     'tl', // Tagalog
-    'uk', // Ukrainian
     'ms', // Malay
-    'th', // Thai
-    'uk', // Ukrainian
-    'vi', // Vietnamese
-    'cs', // Czech
 ];
 
 module.exports = {
